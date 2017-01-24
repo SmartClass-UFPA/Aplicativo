@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#00796B</color> <!-- Teal 700 -->
     <color name="colorAccent">#FF4081</color>
     <color name="transparent">#0000</color>
+    <color name="tabTextSelected">#FFF</color> <!-- Texto selecionado da TAB -->
+    <color name="tabTextNormal">#B0C4DE</color> <!-- Texto da TAB normal -->
 </resources>
