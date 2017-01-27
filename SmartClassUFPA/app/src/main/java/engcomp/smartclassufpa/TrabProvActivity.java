@@ -26,6 +26,30 @@ public class TrabProvActivity extends BaseActivity {
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
 
+        /**
+         *
+         * PROJETO ACTIVITY TRABALHOS E PROVAS
+         *
+         * - definir Classes trabalho e Prova
+         * - definir classe temporária para acesso ao banco de dados
+         *
+         * - definir interface de lista de trabalhos e provas
+         * (lista de cards em ordem de data mais recente)
+         * (trabalhos e provas separados por tabs)
+         *
+         * - definir interface de cadastro de trabalho e provas
+         *
+         *
+         *  # Definição da activity
+         * - consulta no banco de dados os trabalhos e provas
+         * - faz o carregamento da activity através de consultas e passagem de mensagem
+         * - escuta os eventos de click nos cards
+         * - arrastar para apagar, clicar para ver mais detalhes
+         *
+         *
+         *
+         */
+
 
 
     }
