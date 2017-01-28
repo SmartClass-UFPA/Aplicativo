@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="14dp"
-    android:paddingBottom="20dp"
+    android:paddingBottom="25dp"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
     android:gravity="center">
@@ -15,6 +15,7 @@
     <TextView
         android:id="@+id/tv_tab"
         android:textSize="16dp"
+        android:textStyle="bold"
         android:textColor="@color/tabTextSelected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
