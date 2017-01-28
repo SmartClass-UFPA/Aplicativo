@@ -41,18 +41,18 @@ public class FotosListaAdapter extends BaseAdapter {
 
         TextView title = (TextView)view.findViewById(R.id.materia); // title
 
-        title.setText(dados[position]);
+        title.setText(arrayList.get(position));
         System.out.println("fez");
         return view;
     }
 
 
     public int getCount(){
-        return dados.length;
+        return arrayList.size();
     }
 
     public Object getItem(int position) {
-        return dados[position];
+        return arrayList.get(position);
     }
 
     public long getItemId(int position) {

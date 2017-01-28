@@ -31,8 +31,13 @@ public class FotosFragmento extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.list);
 
         final FotosListaAdapter adapter = new FotosListaAdapter(getActivity(), materias, array);
+
+        for (int i = 0; i < 100; i++) {
+        materias.add("Matéria de Testes" + i);
+        }
+
         listView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        //adapter.notifyDataSetChanged();
 
         // Inflate the layout for this fragment
         return view;
