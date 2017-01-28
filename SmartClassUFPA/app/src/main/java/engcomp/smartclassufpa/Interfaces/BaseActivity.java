@@ -1,4 +1,4 @@
-package engcomp.smartclassufpa;
+package engcomp.smartclassufpa.Interfaces;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -9,7 +9,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
+import engcomp.smartclassufpa.R;
 
 public class BaseActivity extends AppCompatActivity {
 

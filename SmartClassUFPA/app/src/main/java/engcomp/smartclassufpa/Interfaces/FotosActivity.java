@@ -1,9 +1,11 @@
-package engcomp.smartclassufpa;
+package engcomp.smartclassufpa.Interfaces;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-public class HorariosActivity extends BaseActivity {
+import engcomp.smartclassufpa.R;
+
+public class FotosActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -11,7 +13,7 @@ public class HorariosActivity extends BaseActivity {
 
         // Define o layout como a do drawer
         setContentView(R.layout.drawer_layout);
-        setupNavDrawer(3); // *Ao chamar o método setupNavDrawer uma flag em int deve
+        setupNavDrawer(2); // *Ao chamar o método setupNavDrawer uma flag em int deve
                            // * ser enviada junto:
                            // * 1 - Início, 2 - Fotos, 3 - Horários, 4 - Trabalhos/Provas
                            // * 5 - Configurações, 6 - Sobre
@@ -21,7 +23,7 @@ public class HorariosActivity extends BaseActivity {
         // Insere o layout da atividade no container do layout do drawer
         FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.container);
         //Em sua activity, substituir o "activity_inicio" pelo nome do seu layout XML
-        getLayoutInflater().inflate(R.layout.activity_horarios, contentFrameLayout);
+        getLayoutInflater().inflate(R.layout.activity_fotos, contentFrameLayout);
 
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
