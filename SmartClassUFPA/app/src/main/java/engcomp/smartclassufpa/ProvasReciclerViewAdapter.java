@@ -50,10 +50,17 @@ public class ProvasReciclerViewAdapter extends RecyclerView.Adapter<ProvasRecicl
             holder.assunto1.setText(prova.getAssuntos().get(0));
 
             if (prova.getAssuntos().get(1)!=null) {
-                holder.assunto1.setText(prova.getAssuntos().get(1));
+                holder.assunto2.setText(prova.getAssuntos().get(1));
+
+                if (prova.getAssuntos().get(2)!=null) {
+                    holder.assunto3.setText(prova.getAssuntos().get(2));
+                } else {
+                    holder.assunto3.setVisibility(View.GONE);
+                }
 
             } else {
-
+                holder.assunto2.setVisibility(View.GONE);
+                holder.assunto3.setVisibility(View.GONE);
             }
 
         } else {
@@ -70,7 +77,7 @@ public class ProvasReciclerViewAdapter extends RecyclerView.Adapter<ProvasRecicl
 
     @Override
     public int getItemCount() {
-        return (null != listaDeProvas ? listaDeProvas.size() : 0);
+        return listaDeProvas.size();
     }
 
     class CustomViewHolder extends RecyclerView.ViewHolder {

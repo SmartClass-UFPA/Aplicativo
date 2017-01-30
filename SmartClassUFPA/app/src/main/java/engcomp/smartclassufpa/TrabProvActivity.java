@@ -1,9 +1,19 @@
 package engcomp.smartclassufpa;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.FrameLayout;
 
+import java.util.ArrayList;
+
+
 public class TrabProvActivity extends BaseActivity {
+
+    private RecyclerView recyclerview;
+    private ProvasReciclerViewAdapter adapter;
+    private ArrayList<Prova> listaDeProva;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +32,16 @@ public class TrabProvActivity extends BaseActivity {
         FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.container);
         //Em sua activity, substituir o "activity_inicio" pelo nome do seu layout XML
         getLayoutInflater().inflate(R.layout.activity_trabprov, contentFrameLayout);
+
+        //recupera a reciclerview
+        recyclerview = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerview.setLayoutManager(new LinearLayoutManager(this));
+        listaDeProva = new ArrayList<>();
+        carregarLista();
+        adapter = new ProvasReciclerViewAdapter(getApplicationContext(),listaDeProva);
+        recyclerview.setAdapter(adapter);
+        recyclerview.getAdapter().notifyDataSetChanged();
+
 
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
@@ -51,6 +71,22 @@ public class TrabProvActivity extends BaseActivity {
          */
 
 
+
+    }
+
+    private void carregarLista() {
+
+        for (int i=0; i<10;i++ ) {
+            Prova prova = new Prova();
+            prova.setTitulo("Prova 2ª Avaliação");
+            prova.setDisciplina("Rede de Computadores II");
+            ArrayList<String> assuntos = new ArrayList<>();
+            assuntos.add("Camada de Aplicação");
+            assuntos.add("Camada de Transporte");
+            prova.setAssuntos(assuntos);
+
+            listaDeProva.add(prova);
+        }
 
     }
 
