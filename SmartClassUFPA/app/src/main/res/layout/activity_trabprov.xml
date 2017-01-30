@@ -8,11 +8,16 @@
     tools:context="engcomp.smartclassufpa.InicioActivity">
 
 
-
-    <TextView
-        android:text="TRABALHOS E PROVAS"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:id="@+id/textView2"
-        android:textSize="24sp" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+
+
+    </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>
