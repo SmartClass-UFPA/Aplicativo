@@ -31,9 +31,8 @@ public class ProvasReciclerViewAdapter extends RecyclerView.Adapter<ProvasRecicl
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_row,null);
-        CustomViewHolder viewHolder = new CustomViewHolder(view);
-        return viewHolder;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_row,parent,false);
+        return new CustomViewHolder(view);
     }
 
 
@@ -46,13 +45,13 @@ public class ProvasReciclerViewAdapter extends RecyclerView.Adapter<ProvasRecicl
         holder.disciplina.setText(prova.getDisciplina());
 
 
-        if (prova.getAssuntos().get(0)!=null) {
+        if (prova.getAssuntos().size()>=1) {
             holder.assunto1.setText(prova.getAssuntos().get(0));
 
-            if (prova.getAssuntos().get(1)!=null) {
+            if (prova.getAssuntos().size()>=2) {
                 holder.assunto2.setText(prova.getAssuntos().get(1));
 
-                if (prova.getAssuntos().get(2)!=null) {
+                if (prova.getAssuntos().size()>=3) {
                     holder.assunto3.setText(prova.getAssuntos().get(2));
                 } else {
                     holder.assunto3.setVisibility(View.GONE);
