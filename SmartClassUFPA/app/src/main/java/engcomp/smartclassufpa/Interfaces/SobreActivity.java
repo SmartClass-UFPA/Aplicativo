@@ -1,8 +1,9 @@
-package engcomp.smartclassufpa;
+package engcomp.smartclassufpa.Interfaces;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.FrameLayout;
+
+import engcomp.smartclassufpa.R;
 
 public class SobreActivity extends BaseActivity {
 

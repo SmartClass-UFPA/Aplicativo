@@ -1,7 +1,9 @@
-package engcomp.smartclassufpa;
+package engcomp.smartclassufpa.Interfaces;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
+
+import engcomp.smartclassufpa.R;
 
 public class InicioActivity extends BaseActivity {
 

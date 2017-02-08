@@ -1,12 +1,16 @@
-package engcomp.smartclassufpa;
+package engcomp.smartclassufpa.Interfaces;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.FrameLayout;
 
+<<<<<<< HEAD:SmartClassUFPA/app/src/main/java/engcomp/smartclassufpa/TrabProvActivity.java
 import java.util.ArrayList;
 
+=======
+import engcomp.smartclassufpa.R;
+>>>>>>> 24b2a96226963b4b44f759d5ed913ef221918311:SmartClassUFPA/app/src/main/java/engcomp/smartclassufpa/Interfaces/TrabProvActivity.java
 
 public class TrabProvActivity extends BaseActivity {
 
