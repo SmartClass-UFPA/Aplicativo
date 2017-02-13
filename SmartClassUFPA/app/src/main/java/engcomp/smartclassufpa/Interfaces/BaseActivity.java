@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 
+import engcomp.smartclassufpa.EmentaActivity;
 import engcomp.smartclassufpa.R;
 
 public class BaseActivity extends AppCompatActivity {
