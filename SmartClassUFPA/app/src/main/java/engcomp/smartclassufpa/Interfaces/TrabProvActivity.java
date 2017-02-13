@@ -45,7 +45,7 @@ public class TrabProvActivity extends BaseActivity {
         getLayoutInflater().inflate(R.layout.activity_trabprov, contentFrameLayout);
 
         getSupportActionBar().setElevation(0);
-        String[] titles = {"PROVAS", "TRABALHOS"};
+        String[] titles = {"PROVAS","TRABALHOS"};
         tabAdapter = new ProvasTrabalhosTabAdapter(getSupportFragmentManager(),this,titles);
 
 
@@ -56,10 +56,10 @@ public class TrabProvActivity extends BaseActivity {
         // Give the SlidingTabLayout the ViewPager
         mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.stl_tabs);
         mSlidingTabLayout.setViewPager(mviewPager);
-        mSlidingTabLayout.setBackground(getResources().getColor(R.color.colorPrimaryDark));
-        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(android.R.color.white));
-        mSlidingTabLayout.setCustomFocusedColor(getResources().getColor(R.color.tabTextSelected));
-        mSlidingTabLayout.setCustomUnfocusedColor(getResources().getColor(R.color.tabTextSelected));
+        mSlidingTabLayout.setBackground(R.color.colorPrimaryDark);
+        mSlidingTabLayout.setSelectedIndicatorColors(android.R.color.white);
+        //mSlidingTabLayout.setCustomFocusedColor(R.color.tabTextSelected);
+        //mSlidingTabLayout.setCustomUnfocusedColor(R.color.tabTextSelected);
         mSlidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.tv_tab);
         mSlidingTabLayout.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -73,7 +73,7 @@ public class TrabProvActivity extends BaseActivity {
         });
 
 
-       // mSlidingTabLayout.setViewPager(mviewPager);
+        //mSlidingTabLayout.setViewPager(mviewPager);
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
 

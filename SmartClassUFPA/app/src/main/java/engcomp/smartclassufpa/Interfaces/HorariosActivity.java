@@ -40,7 +40,7 @@ public class HorariosActivity extends BaseActivity {
 
         //TOOLBAR
         getSupportActionBar().setElevation(0);
-        String[] titles = {"SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SEXTA"};
+        String[] titles = {"SEGUNDA", "TERÇA", "QUARTA","QUINTA", "SEXTA"};
         tabAdapter = new TabAdapter(getSupportFragmentManager(), this,titles);
 
 

@@ -52,8 +52,8 @@ public class SlidingTabLayout extends HorizontalScrollView {
     public static final int FOCUSED_WHITE       = 0xFFFFFFFF;
     public static final int NOT_FOCUSED_WHITE   = 0xB3FFFFFF;
 
-    private int customFocusedColor;
-    private int customUnfocusedColor;
+    private int customFocusedColor = 0;
+    private int customUnfocusedColor = 0;
 
     private int textSize = 14;
 
@@ -299,8 +299,12 @@ public class SlidingTabLayout extends HorizontalScrollView {
             TextView tabTitleView = null;
 
             TabAdapter adapter = (TabAdapter) mViewPager.getAdapter();
-            int focused_color = customFocusedColor != 0 ? customFocusedColor : FOCUSED_WHITE;
-            int unfocused_color = customUnfocusedColor != 0 ? customUnfocusedColor : NOT_FOCUSED_WHITE;
+            int focused_color = (customFocusedColor == 0) ?   FOCUSED_WHITE : customFocusedColor;
+            int unfocused_color = (customUnfocusedColor == 0) ? NOT_FOCUSED_WHITE : customUnfocusedColor;
+            Log.i("ol",""+" "+customFocusedColor);
+            Log.i("ol",""+" "+customFocusedColor);
+            Log.i("ol",""+" "+focused_color);
+            Log.i("ol",""+" "+unfocused_color);
 
             if (mScrollState == ViewPager.SCROLL_STATE_IDLE) {
                 mTabStrip.onViewPagerPageChanged(position, 0f);
@@ -309,6 +313,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
             for (int i = 0; i < mTabStrip.getChildCount(); i++) {
                 mTabStrip.getChildAt(i).setSelected(position == i);
                 tabTitleView = (TextView) mTabStrip.getChildAt(i).findViewById(R.id.tv_tab);
+                Log.i("ol",""+i+" "+mViewPager.getCurrentItem());
                 tabTitleView.setTextColor(i == mViewPager.getCurrentItem() ? focused_color : unfocused_color);
             }
             if (mViewPagerPageChangeListener != null) {

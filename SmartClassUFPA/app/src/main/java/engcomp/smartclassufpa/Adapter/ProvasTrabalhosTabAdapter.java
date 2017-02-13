@@ -35,8 +35,9 @@ public class ProvasTrabalhosTabAdapter extends TabAdapter {
                 frag = new ProvasFragment();
                 break;
             case 1: //Dia da semana: Terça-feira
-                frag = new TrabalhosFragment();
+                frag = new ProvasFragment();
                 break;
+
             default:
 
         }

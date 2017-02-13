@@ -43,7 +43,13 @@ public class ProvasFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_provas, container, false);
-
+        recyclerview = (RecyclerView) v.findViewById(R.id.recycler_view);
+        recyclerview.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        listaDeProva = new ArrayList<>();
+        carregarLista();
+        adapter = new ProvasReciclerViewAdapter(v.getContext(),listaDeProva);
+        recyclerview.setAdapter(adapter);
+        recyclerview.getAdapter().notifyDataSetChanged();
 
 
 
@@ -55,13 +61,7 @@ public class ProvasFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         //recupera a reciclerview
-        recyclerview = (RecyclerView) getActivity().findViewById(R.id.recycler_view);
-        recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
-        listaDeProva = new ArrayList<>();
-        carregarLista();
-        adapter = new ProvasReciclerViewAdapter(getActivity().getApplicationContext(),listaDeProva);
-        recyclerview.setAdapter(adapter);
-        recyclerview.getAdapter().notifyDataSetChanged();
+
 
 
     }
