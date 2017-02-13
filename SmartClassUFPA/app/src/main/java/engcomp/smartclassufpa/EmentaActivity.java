@@ -3,8 +3,6 @@ package engcomp.smartclassufpa;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import engcomp.smartclassufpa.Interfaces.BaseActivity;
-
 public class EmentaActivity extends BaseActivity {
 
     @Override

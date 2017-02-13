@@ -22,12 +22,11 @@ import engcomp.smartclassufpa.R;
  */
 public class TabAdapter extends FragmentPagerAdapter {
     private Context mContext;
-    private String[] titles;
+    private String[] titles = {"SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SEXTA"};
 
-    public TabAdapter(FragmentManager fm, Context c, String[] titles) {
+    public TabAdapter(FragmentManager fm, Context c) {
         super(fm);
 
-        this.titles = titles;
         mContext = c;
         //
     }
@@ -68,8 +67,6 @@ public class TabAdapter extends FragmentPagerAdapter {
 
         return titles.length;
     }
-
-
     @Override
     public CharSequence getPageTitle(int position){
 

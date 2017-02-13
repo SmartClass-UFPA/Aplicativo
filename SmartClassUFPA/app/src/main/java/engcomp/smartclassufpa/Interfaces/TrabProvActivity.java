@@ -1,29 +1,22 @@
 package engcomp.smartclassufpa.Interfaces;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.FrameLayout;
-import android.widget.Toolbar;
 
+<<<<<<< HEAD:SmartClassUFPA/app/src/main/java/engcomp/smartclassufpa/TrabProvActivity.java
 import java.util.ArrayList;
 
-import engcomp.smartclassufpa.Adapter.ProvasTrabalhosTabAdapter;
-import engcomp.smartclassufpa.Adapter.TabAdapter;
-import engcomp.smartclassufpa.Prova;
-import engcomp.smartclassufpa.ProvasReciclerViewAdapter;
+=======
 import engcomp.smartclassufpa.R;
-import engcomp.smartclassufpa.extras.SlidingTabLayout;
-
+>>>>>>> 24b2a96226963b4b44f759d5ed913ef221918311:SmartClassUFPA/app/src/main/java/engcomp/smartclassufpa/Interfaces/TrabProvActivity.java
 
 public class TrabProvActivity extends BaseActivity {
 
-    private ViewPager mviewPager;
-    private SlidingTabLayout mSlidingTabLayout;
-    private Toolbar mToolbar;
-    private ProvasTrabalhosTabAdapter tabAdapter;
-
+    private RecyclerView recyclerview;
+    private ProvasReciclerViewAdapter adapter;
+    private ArrayList<Prova> listaDeProva;
 
 
     @Override
@@ -44,36 +37,16 @@ public class TrabProvActivity extends BaseActivity {
         //Em sua activity, substituir o "activity_inicio" pelo nome do seu layout XML
         getLayoutInflater().inflate(R.layout.activity_trabprov, contentFrameLayout);
 
-        getSupportActionBar().setElevation(0);
-        String[] titles = {"PROVAS", "TRABALHOS"};
-        tabAdapter = new ProvasTrabalhosTabAdapter(getSupportFragmentManager(),this,titles);
+        //recupera a reciclerview
+        recyclerview = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerview.setLayoutManager(new LinearLayoutManager(this));
+        listaDeProva = new ArrayList<>();
+        carregarLista();
+        adapter = new ProvasReciclerViewAdapter(getApplicationContext(),listaDeProva);
+        recyclerview.setAdapter(adapter);
+        recyclerview.getAdapter().notifyDataSetChanged();
 
 
-        // Get the ViewPager and set it's PagerAdapter so that is can display items
-        mviewPager = (ViewPager) findViewById(R.id.vp_tabs);
-        mviewPager.setAdapter(tabAdapter);
-
-        // Give the SlidingTabLayout the ViewPager
-        mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.stl_tabs);
-        mSlidingTabLayout.setViewPager(mviewPager);
-        mSlidingTabLayout.setBackground(getResources().getColor(R.color.colorPrimaryDark));
-        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(android.R.color.white));
-        mSlidingTabLayout.setCustomFocusedColor(getResources().getColor(R.color.tabTextSelected));
-        mSlidingTabLayout.setCustomUnfocusedColor(getResources().getColor(R.color.tabTextSelected));
-        mSlidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.tv_tab);
-        mSlidingTabLayout.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
-            @Override
-            public void onPageSelected(int position) {
-
-            }
-            @Override
-            public void onPageScrollStateChanged(int state) {}
-        });
-
-
-       // mSlidingTabLayout.setViewPager(mviewPager);
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
 
@@ -105,7 +78,21 @@ public class TrabProvActivity extends BaseActivity {
 
     }
 
+    private void carregarLista() {
 
+        for (int i=0; i<10;i++ ) {
+            Prova prova = new Prova();
+            prova.setTitulo("Prova 2ª Avaliação");
+            prova.setDisciplina("Rede de Computadores II");
+            ArrayList<String> assuntos = new ArrayList<>();
+            assuntos.add("Camada de Aplicação");
+            assuntos.add("Camada de Transporte");
+            prova.setAssuntos(assuntos);
+
+            listaDeProva.add(prova);
+        }
+
+    }
 
 
 }

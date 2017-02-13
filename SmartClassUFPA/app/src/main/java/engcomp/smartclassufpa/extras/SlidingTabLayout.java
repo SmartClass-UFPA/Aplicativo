@@ -7,7 +7,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -186,7 +185,6 @@ public class SlidingTabLayout extends HorizontalScrollView {
         int unfocused_color = customUnfocusedColor != 0 ? customUnfocusedColor : NOT_FOCUSED_WHITE;
 
         for (int i = 0; i < adapter.getCount(); i++) {
-            Log.i("exit",""+adapter.getCount());
             View tabView = null;
             TextView tabTitleView = null;
 
