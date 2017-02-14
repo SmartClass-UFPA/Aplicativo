@@ -29,7 +29,7 @@ public class TabAdapter extends FragmentPagerAdapter {
 
         this.titles = titles;
         mContext = c;
-        //
+
     }
     @Override
     public Fragment getItem(int position) {

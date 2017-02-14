@@ -6,11 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
 import engcomp.smartclassufpa.Fragment.ProvasFragment;
-import engcomp.smartclassufpa.Fragment.QuartaFragment;
-import engcomp.smartclassufpa.Fragment.QuintaFragment;
-import engcomp.smartclassufpa.Fragment.SegundaFragment;
-import engcomp.smartclassufpa.Fragment.SextaFragment;
-import engcomp.smartclassufpa.Fragment.TercaFragment;
 import engcomp.smartclassufpa.Fragment.TrabalhosFragment;
 
 /**
@@ -31,11 +26,11 @@ public class ProvasTrabalhosTabAdapter extends TabAdapter {
         Fragment frag = null;
 
         switch (position) {
-            case 0: //Dia da semana: Segunda-feira
+            case 0:
                 frag = new ProvasFragment();
                 break;
-            case 1: //Dia da semana: Terça-feira
-                frag = new ProvasFragment();
+            case 1:
+                frag = new TrabalhosFragment();
                 break;
 
             default:

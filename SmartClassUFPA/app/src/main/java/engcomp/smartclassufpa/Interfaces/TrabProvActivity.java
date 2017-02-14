@@ -1,27 +1,19 @@
 package engcomp.smartclassufpa.Interfaces;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.Toolbar;
-
-import java.util.ArrayList;
-
 import engcomp.smartclassufpa.Adapter.ProvasTrabalhosTabAdapter;
-import engcomp.smartclassufpa.Adapter.TabAdapter;
-import engcomp.smartclassufpa.Prova;
-import engcomp.smartclassufpa.ProvasReciclerViewAdapter;
 import engcomp.smartclassufpa.R;
-import engcomp.smartclassufpa.extras.SlidingTabLayout;
 
 
 public class TrabProvActivity extends BaseActivity {
 
-    private ViewPager mviewPager;
-    private SlidingTabLayout mSlidingTabLayout;
-    private Toolbar mToolbar;
+    private ViewPager mViewPager;
     private ProvasTrabalhosTabAdapter tabAdapter;
 
 
@@ -45,31 +37,22 @@ public class TrabProvActivity extends BaseActivity {
         getLayoutInflater().inflate(R.layout.activity_trabprov, contentFrameLayout);
 
         getSupportActionBar().setElevation(0);
+
         String[] titles = {"PROVAS","TRABALHOS"};
-        tabAdapter = new ProvasTrabalhosTabAdapter(getSupportFragmentManager(),this,titles);
+        tabAdapter = new ProvasTrabalhosTabAdapter(getSupportFragmentManager(),getApplicationContext(),titles);
+        mViewPager = (ViewPager) findViewById(R.id.vp);
+        mViewPager.setAdapter(tabAdapter);
 
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
-        // Get the ViewPager and set it's PagerAdapter so that is can display items
-        mviewPager = (ViewPager) findViewById(R.id.vp_tabs);
-        mviewPager.setAdapter(tabAdapter);
-
-        // Give the SlidingTabLayout the ViewPager
-        mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.stl_tabs);
-        mSlidingTabLayout.setViewPager(mviewPager);
-        mSlidingTabLayout.setBackground(R.color.colorPrimaryDark);
-        mSlidingTabLayout.setSelectedIndicatorColors(android.R.color.white);
-        //mSlidingTabLayout.setCustomFocusedColor(R.color.tabTextSelected);
-        //mSlidingTabLayout.setCustomUnfocusedColor(R.color.tabTextSelected);
-        mSlidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.tv_tab);
-        mSlidingTabLayout.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
-            @Override
-            public void onPageSelected(int position) {
-
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
-            @Override
-            public void onPageScrollStateChanged(int state) {}
         });
 
 
