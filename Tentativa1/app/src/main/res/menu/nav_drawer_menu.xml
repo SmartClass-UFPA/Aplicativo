@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <!-- Lista das telas  -->
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_home_white_24dp"
+                    android:title="Início" />
+
+                        <item
+                            android:id="@+id/nav_fotos"
+                            android:icon="@drawable/ic_photo_album_white_24dp"
+                            android:title="Fotos" />
+
+                        <item
+                            android:id="@+id/nav_horarios"
+                            android:icon="@drawable/ic_schedule_white_24dp"
+                            android:title="Horários" />
+
+                        <item
+                            android:id="@+id/nav_provasetrab"
+                            android:icon="@drawable/ic_work_white_24dp"
+                            android:title="Trabalhos e Provas" />
+
+                        <item
+                            android:id="@+id/nav_ementa"
+                            android:icon="@drawable/ic_library_books_white_24dp"
+                            android:title="Ementa" />
+
+                        <item
+                            android:id="@+id/nav_settings"
+                            android:icon="@drawable/ic_settings_white_24dp"
+                            android:title="Configurações" />
+
+                        <item
+                            android:id="@+id/nav_sobre"
+                            android:icon="@drawable/ic_info_outline_white_24dp"
+                            android:title="Sobre" />
+
+    </group>
+
+</menu>
