@@ -1,6 +1,7 @@
 package engcomp.smartclassufpa.Interfaces;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,6 +19,12 @@ public class BaseActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout; // Variável para armazenar o drawer
     protected MenuItem menuItem;
     public NavigationView navigationView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     /**
      * @Override protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +123,11 @@ public class BaseActivity extends AppCompatActivity {
             if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
+
+            else {
+                super.onBackPressed();
+                overridePendingTransition(0, 0);
+            }
         }
 
         else {
@@ -208,7 +220,7 @@ public class BaseActivity extends AppCompatActivity {
                 navigationView.getMenu().findItem(R.id.nav_sobre).setChecked(true);
                 break;
             case 7:
-                navigationView.getMenu().findItem(R.id.nav_sobre).setChecked(true);
+                navigationView.getMenu().findItem(R.id.nav_ementa).setChecked(true);
                 break;
             default:
                 navigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
