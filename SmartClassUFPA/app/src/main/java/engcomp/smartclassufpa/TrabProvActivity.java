@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.FrameLayout;
-
 import java.util.ArrayList;
 
 
@@ -32,6 +31,8 @@ public class TrabProvActivity extends BaseActivity {
         FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.container);
         //Em sua activity, substituir o "activity_inicio" pelo nome do seu layout XML
         getLayoutInflater().inflate(R.layout.activity_trabprov, contentFrameLayout);
+
+
 
         //recupera a reciclerview
         recyclerview = (RecyclerView) findViewById(R.id.recycler_view);

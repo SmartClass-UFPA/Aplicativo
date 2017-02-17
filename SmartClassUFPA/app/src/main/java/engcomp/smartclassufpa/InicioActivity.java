@@ -1,9 +1,17 @@
 package engcomp.smartclassufpa;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.widget.FrameLayout;
+import android.support.v7.widget.RecyclerView;
+import android.widget.FrameLayout;
+import java.util.ArrayList;
 
 public class InicioActivity extends BaseActivity {
+
+    private RecyclerView recyclerview2;
+    private InicioRecyclerViewAdapter adapter;
+    private ArrayList<Notificacao> aviso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +33,50 @@ public class InicioActivity extends BaseActivity {
 
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
+        recyclerview2 = (RecyclerView) findViewById(R.id.recycler_view2);
+        recyclerview2.setLayoutManager(new LinearLayoutManager(this));
+        aviso = new ArrayList<>();
+        abrirLista();
+        adapter = new InicioRecyclerViewAdapter(getApplicationContext(),aviso);
+        recyclerview2.setAdapter(adapter);
+        recyclerview2.getAdapter().notifyDataSetChanged();}
 
+        void abrirLista()
+        {
+                Notificacao notificacao = new Notificacao();
+                notificacao.setTitulo("Professor em sala");
+                notificacao.setHorario("7:30~9:10");
+                notificacao.setEstado("sim, corre.");
+                notificacao.setMateria("Matéria: Redes");
+                notificacao.setAssunto("ele parece estar brabo pelo ar condicionado ter quebrado.");
+                aviso.add(notificacao);
 
+                Notificacao notificacao1 = new Notificacao();
+                notificacao1.setTitulo("Temperatura:");
+                notificacao1.setHorario("7:30~9:10");
+                notificacao1.setEstado("Rio de janeiro 40º");
+                notificacao1.setAssunto("Nossa, vai todo mundo morrer");
+                aviso.add(notificacao1);
 
-    }
+                Notificacao notificacao2 = new Notificacao();
+                notificacao2.setTitulo("Chuva");
+                notificacao2.setHorario("7:38");
+                notificacao2.setEstado("Está chovendo");
+                notificacao2.setAssunto("Traz um barco pra gente");
+                aviso.add(notificacao2);
 
-
+                Notificacao notificacao3 = new Notificacao();
+                notificacao3.setTitulo(" receber do banco de dados");
+                notificacao3.setHorario("receber do banco de dados");
+                notificacao3.setEstado("receber do banco de dados");
+                notificacao3.setAssunto("CADÊ O BANCO DE DADOS? ;-;");
+                aviso.add(notificacao3);
+        }
 }
+
+
+
+
+
+
+

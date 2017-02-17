@@ -6,6 +6,6 @@ package engcomp.smartclassufpa;
 
 public class Prova extends Atividade {
 
-
+//ainda vai ter o trabalho, e cada um tem coisas especificas
 
 }

@@ -23,36 +23,27 @@ public class Atividade {
     }
 
     private ArrayList<Boolean> checkAssuntos;
-
-
     public Calendar getData() {
         return data;
     }
-
     public void setData(Calendar data) {
         this.data = data;
     }
-
     public String getTitulo() {
         return titulo;
     }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-
     public String getDisciplina() {
         return disciplina;
     }
-
     public void setDisciplina(String disciplina) {
         this.disciplina = disciplina;
     }
-
     public ArrayList<String> getAssuntos() {
         return assuntos;
     }
-
     public void setAssuntos(ArrayList<String> assuntos) {
         this.assuntos = assuntos;
     }
