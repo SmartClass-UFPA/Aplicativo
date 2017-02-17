@@ -3,8 +3,11 @@ package engcomp.smartclassufpa.Interfaces;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.Toolbar;
@@ -17,8 +20,6 @@ import engcomp.smartclassufpa.extras.SlidingTabLayout;
 
 public class HorariosActivity extends BaseActivity {
     private ViewPager mviewPager;
-    private SlidingTabLayout mSlidingTabLayout;
-    private Toolbar mToolbar;
     private TabAdapter tabAdapter;
     //private ListView listViewSegunda;
     //private ListViewHorarioAdapter lAdapter;
@@ -51,35 +52,20 @@ public class HorariosActivity extends BaseActivity {
 
 
         // Get the ViewPager and set it's PagerAdapter so that is can display items
-        mviewPager = (ViewPager) findViewById(R.id.vp_tabs);
+        mviewPager = (ViewPager) findViewById(R.id.vp);
         mviewPager.setAdapter(tabAdapter);
 
-        // Give the SlidingTabLayout the ViewPager
-        mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.stl_tabs);
-        mSlidingTabLayout.setViewPager(mviewPager);
-        mSlidingTabLayout.setBackground(getResources().getColor(R.color.colorPrimaryDark));
-        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(android.R.color.white));
-        //mSlidingTabLayout.setCustomFocusedColor(getResources().getColor(R.color.tabTextSelected));
-        //mSlidingTabLayout.setCustomUnfocusedColor(getResources().getColor(R.color.tabTextSelected));
-        mSlidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.tv_tab);
-        mSlidingTabLayout.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
-            @Override
-            public void onPageSelected(int position) {
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mviewPager);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
-            @Override
-            public void onPageScrollStateChanged(int state) {}
         });
-
-
-        mSlidingTabLayout.setViewPager(mviewPager);
-        //mSlidingTabLayout.setHorizontalFadingEdgeEnabled(true);
-        //mSlidingTabLayout.setHorizontalScrollBarEnabled(true);
-        //mSlidingTabLayout
-
-        //
 
 
 
