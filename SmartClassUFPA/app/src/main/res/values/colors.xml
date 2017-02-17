@@ -7,7 +7,10 @@
     <color name="tabTextSelected">#FFF</color> <!-- Texto selecionado da TAB -->
     <color name="tabTextNormal">#B0C4DE</color> <!-- Texto da TAB normal -->
     <color name="preto_preto_preto"> #000 </color>
+    <color name="listTextHorarioProfessor">#A9A9A9</color>
+    <color name="listTextMateria">#000</color>
 
-    <item name="background_listview_semana" type="color">#80CBC4</item>
+    <item name="background_listview_semana" type="color">#FFFF</item>
     <item name="background_listview_main" type="color">#009688</item>
+    <item name="background_externo" type="color">#D3D3D3</item>
 </resources>

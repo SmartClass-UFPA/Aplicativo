@@ -11,7 +11,7 @@
         android:id="@+id/listview_semana_quarta"
         android:background="#808080"
         android:dividerHeight="3dp"
-        android:divider="@color/tabTextSelected"
+        android:divider="@color/background_externo"
         android:layout_margin="10dp">
     </ListView>
 

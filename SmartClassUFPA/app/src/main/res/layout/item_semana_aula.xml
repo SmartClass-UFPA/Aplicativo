@@ -12,7 +12,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:textColor="@color/tabTextSelected"
+        android:textColor="@color/listTextHorarioProfessor"
         android:textSize="12sp"
         android:text="Horário"/>
 
@@ -23,7 +23,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:textSize="18sp"
-        android:textColor="@color/tabTextSelected"
+        android:textColor="@color/listTextMateria"
         android:textStyle="bold"
         android:text="Nome da Matéria" />
 
@@ -36,7 +36,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:textSize="14sp"
-        android:textColor="@color/tabTextSelected"
+        android:textColor="@color/listTextHorarioProfessor"
         android:text="Nome do Professor" />
 
 </LinearLayout>
