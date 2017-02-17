@@ -5,9 +5,14 @@
     tools:context="engcomp.smartclassufpa.Fragment.QuartaFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hi, I'm a Quarta fragment" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview_semana_quarta"
+        android:background="#808080"
+        android:dividerHeight="3dp"
+        android:divider="@color/tabTextSelected"
+        android:layout_margin="10dp">
+    </ListView>
 
 </FrameLayout>

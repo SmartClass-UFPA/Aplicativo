@@ -7,14 +7,9 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.FrameLayout;
-<<<<<<< HEAD:SmartClassUFPA/app/src/main/java/engcomp/smartclassufpa/TrabProvActivity.java
 import java.util.ArrayList;
-=======
 import engcomp.smartclassufpa.Adapter.ProvasTrabalhosTabAdapter;
 import engcomp.smartclassufpa.R;
->>>>>>> 8d55fbd84d7201a03b8be47bf95be278dd1f1e8d:SmartClassUFPA/app/src/main/java/engcomp/smartclassufpa/Interfaces/TrabProvActivity.java
-
-
 public class TrabProvActivity extends BaseActivity {
 
     private ViewPager mViewPager;
@@ -40,18 +35,7 @@ public class TrabProvActivity extends BaseActivity {
         //Em sua activity, substituir o "activity_inicio" pelo nome do seu layout XML
         getLayoutInflater().inflate(R.layout.activity_trabprov, contentFrameLayout);
 
-<<<<<<< HEAD:SmartClassUFPA/app/src/main/java/engcomp/smartclassufpa/TrabProvActivity.java
 
-
-        //recupera a reciclerview
-        recyclerview = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerview.setLayoutManager(new LinearLayoutManager(this));
-        listaDeProva = new ArrayList<>();
-        carregarLista();
-        adapter = new ProvasReciclerViewAdapter(getApplicationContext(),listaDeProva);
-        recyclerview.setAdapter(adapter);
-        recyclerview.getAdapter().notifyDataSetChanged();
-=======
         getSupportActionBar().setElevation(0);
 
         String[] titles = {"PROVAS","TRABALHOS"};
@@ -61,7 +45,6 @@ public class TrabProvActivity extends BaseActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
->>>>>>> 8d55fbd84d7201a03b8be47bf95be278dd1f1e8d:SmartClassUFPA/app/src/main/java/engcomp/smartclassufpa/Interfaces/TrabProvActivity.java
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.Toolbar;
 
+import engcomp.smartclassufpa.Adapter.ListViewHorarioAdapter;
 import engcomp.smartclassufpa.Adapter.TabAdapter;
 import engcomp.smartclassufpa.R;
+import engcomp.smartclassufpa.extras.Horario;
 import engcomp.smartclassufpa.extras.SlidingTabLayout;
 
 public class HorariosActivity extends BaseActivity {
@@ -16,6 +19,8 @@ public class HorariosActivity extends BaseActivity {
     private SlidingTabLayout mSlidingTabLayout;
     private Toolbar mToolbar;
     private TabAdapter tabAdapter;
+    //private ListView listViewSegunda;
+    //private ListViewHorarioAdapter lAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +77,10 @@ public class HorariosActivity extends BaseActivity {
         //mSlidingTabLayout.setHorizontalFadingEdgeEnabled(true);
         //mSlidingTabLayout.setHorizontalScrollBarEnabled(true);
         //mSlidingTabLayout
+
+        //
+
+
 
 
 

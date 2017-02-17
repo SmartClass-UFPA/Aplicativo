@@ -13,9 +13,9 @@
     <string name="notifica_o">Notificação</string>
     <string name="estado_da_notifica_ao">estado da notificaçao</string>
     <string name="aviso">Aviso</string>
-=======
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
->>>>>>> 8d55fbd84d7201a03b8be47bf95be278dd1f1e8d
+    <string name="title_activity_semana_aulas">SemanaAulas</string>
+
 </resources>

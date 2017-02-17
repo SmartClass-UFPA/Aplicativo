@@ -1,8 +1,19 @@
 package engcomp.smartclassufpa.Interfaces;
 
-import android.os.Bundle;
-import android.widget.FrameLayout;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import engcomp.smartclassufpa.FotosFragmento;
 import engcomp.smartclassufpa.R;
 
 public class FotosActivity extends BaseActivity {
@@ -29,8 +40,34 @@ public class FotosActivity extends BaseActivity {
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
 
 
+        /**
+        ListView listaFotos = (ListView) findViewById(R.id.ListViewFotos);
+        String[] materias = {"Circuitos Elétricos", "Redes de Computadores II",
+                "Probabilidade e Estatística", "Sinais e Sistemas"};
+        ArrayList<String> lista = new ArrayList<String>(Arrays.asList(materias));
+        for (int i = 0; i<12; i++){
+
+            lista.add("Matéria de Teste" + i);
+        }
+
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.activity_fotos_list_sample, lista);
+        listaFotos.setAdapter(adapter); **/
+
+
+
+
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        FotosFragmento fragment = new FotosFragmento();
+        fragmentTransaction.add(R.id.containerFotos, fragment, "oi");
+        fragmentTransaction.commit();
+
+
+
 
     }
+
 
 
 }

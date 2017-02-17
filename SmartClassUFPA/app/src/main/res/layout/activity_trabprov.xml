@@ -11,20 +11,8 @@
 <android.support.design.widget.AppBarLayout
 android:id="@+id/appbar"
 android:layout_width="match_parent"
-android:layout_height="wrap_content"
+android:layout_height="wrap_content">
 
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            />
-
-
-</android.support.design.widget.CoordinatorLayout>
-
-android:theme="@style/AppTheme.AppBarOverlay">
 <android.support.v7.widget.Toolbar
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
@@ -37,7 +25,9 @@ android:theme="@style/AppTheme.AppBarOverlay">
     android:id="@+id/tabs"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
-</android.support.design.widget.AppBarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
 <android.support.v4.view.ViewPager
 android:id="@+id/vp"
 android:layout_width="match_parent"
@@ -51,4 +41,3 @@ android:layout_gravity="end|bottom"
 android:layout_margin="@dimen/fab_margin"
 android:src="@android:drawable/ic_dialog_email" />
     </android.support.design.widget.CoordinatorLayout>
->>>>>>> 8d55fbd84d7201a03b8be47bf95be278dd1f1e8d
