@@ -1,6 +1,7 @@
 package engcomp.smartclassufpa.Interfaces;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 
+import engcomp.smartclassufpa.EmentaActivity;
 import engcomp.smartclassufpa.R;
 
 public class BaseActivity extends AppCompatActivity {
@@ -17,6 +19,12 @@ public class BaseActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout; // Variável para armazenar o drawer
     protected MenuItem menuItem;
     public NavigationView navigationView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     /**
      * @Override protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +123,11 @@ public class BaseActivity extends AppCompatActivity {
             if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
+
+            else {
+                super.onBackPressed();
+                overridePendingTransition(0, 0);
+            }
         }
 
         else {
@@ -126,6 +139,14 @@ public class BaseActivity extends AppCompatActivity {
 
         if (menuItem.getItemId() == R.id.nav_fotos) {
             Intent intent = new Intent(this, FotosActivity.class);
+            drawerLayout.closeDrawer(GravityCompat.START);
+            startActivity(intent);
+            overridePendingTransition(0, 0);
+
+        }
+
+        if (menuItem.getItemId() == R.id.nav_ementa) {
+            Intent intent = new Intent(this, EmentaActivity.class);
             drawerLayout.closeDrawer(GravityCompat.START);
             startActivity(intent);
             overridePendingTransition(0, 0);
@@ -197,6 +218,9 @@ public class BaseActivity extends AppCompatActivity {
                 break;
             case 6:
                 navigationView.getMenu().findItem(R.id.nav_sobre).setChecked(true);
+                break;
+            case 7:
+                navigationView.getMenu().findItem(R.id.nav_ementa).setChecked(true);
                 break;
             default:
                 navigationView.getMenu().findItem(R.id.nav_home).setChecked(true);

@@ -22,23 +22,32 @@
         <activity
             android:name=".Interfaces.FotosActivity"
             android:label="Fotos"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".Interfaces.HorariosActivity"
             android:label="Horários"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".Interfaces.TrabProvActivity"
             android:label="Trabalhos e Provas"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Interfaces.ConfigActivity"
             android:label="Configurações"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Interfaces.SobreActivity"
             android:label="Sobre"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".EmentaActivity"
+            android:label="Ementa"
+            android:theme="@style/AppTheme">
+        </activity>
+
+
     </application>
 
 </manifest>

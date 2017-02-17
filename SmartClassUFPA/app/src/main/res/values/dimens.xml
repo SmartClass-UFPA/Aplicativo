@@ -13,4 +13,5 @@
     <dimen name="tab_padding_right">12dp</dimen>
     <dimen name="tab_padding_top">10dp</dimen>
     <dimen name="tab_indicator_height">2dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

@@ -46,9 +46,8 @@ public class HorariosActivity extends BaseActivity {
 
         //TOOLBAR
         getSupportActionBar().setElevation(0);
-
-        //
-        tabAdapter = new TabAdapter(getSupportFragmentManager(), this);
+        String[] titles = {"SEGUNDA", "TERÇA", "QUARTA","QUINTA", "SEXTA"};
+        tabAdapter = new TabAdapter(getSupportFragmentManager(), this,titles);
 
 
         // Get the ViewPager and set it's PagerAdapter so that is can display items
