@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="engcomp.smartclassufpa.Fragment.TercaFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview_semana_terça"
+        android:background="#808080"
+        android:dividerHeight="3dp"
+        android:divider="@color/tabTextSelected"
+        android:layout_margin="10dp">
+    </ListView>
+
+</FrameLayout>

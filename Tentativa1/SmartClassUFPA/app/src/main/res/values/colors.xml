@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color> <!-- Teal 500 -->
+    <color name="colorPrimaryDark">#00796B</color> <!-- Teal 700 -->
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#0000</color>
+    <color name="tabTextSelected">#FFF</color> <!-- Texto selecionado da TAB -->
+    <color name="tabTextNormal">#B0C4DE</color> <!-- Texto da TAB normal -->
+    <color name="preto_preto_preto"> #000 </color>
+</resources>
