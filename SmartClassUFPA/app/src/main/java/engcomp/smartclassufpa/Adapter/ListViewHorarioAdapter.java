@@ -26,6 +26,11 @@ public class ListViewHorarioAdapter extends BaseAdapter {
         minflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
+    public void addHorarios (ArrayList<Horario> getSemana) {
+        mData = getSemana;
+        notifyDataSetChanged();
+    }
+
     public void addItem (Horario horario) {
         mData.add(horario);
         notifyDataSetChanged();
