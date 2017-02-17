@@ -7,6 +7,7 @@
     <color name="tabTextSelected">#FFF</color> <!-- Texto selecionado da TAB -->
     <color name="tabTextNormal">#B0C4DE</color> <!-- Texto da TAB normal -->
     <color name="preto_preto_preto"> #000 </color>
-    
+
+    <item name="background_listview_semana" type="color">#80CBC4</item>
     <item name="background_listview_main" type="color">#009688</item>
 </resources>
