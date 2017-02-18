@@ -2,8 +2,7 @@ package engcomp.smartclassufpa.Banco;
 
 import java.util.ArrayList;
 
-import engcomp.smartclassufpa.Adapter.ListViewHorarioAdapter;
-import engcomp.smartclassufpa.extras.Horario;
+import engcomp.smartclassufpa.Data.Horario;
 
 /**
  * Created by root on 2/12/17.

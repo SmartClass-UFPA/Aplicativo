@@ -8,9 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Interfaces.BaseActivity" />
+        <activity android:name=".View.Activities.BaseActivity" />
         <activity
-            android:name=".Interfaces.InicioActivity"
+            android:name=".View.Activities.InicioActivity"
             android:label="SmartClass UFPA"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -20,23 +20,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Interfaces.FotosActivity"
+            android:name=".View.Activities.FotosActivity"
             android:label="Fotos"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".Interfaces.HorariosActivity"
+            android:name=".View.Activities.HorariosActivity"
             android:label="Horários"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".Interfaces.TrabProvActivity"
+            android:name=".View.Activities.TrabProvActivity"
             android:label="Trabalhos e Provas"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Interfaces.ConfigActivity"
+            android:name=".View.Activities.ConfigActivity"
             android:label="Configurações"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Interfaces.SobreActivity"
+            android:name=".View.Activities.SobreActivity"
             android:label="Sobre"
             android:theme="@style/AppTheme">
         </activity>
