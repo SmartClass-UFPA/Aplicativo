@@ -13,7 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import engcomp.smartclassufpa.Banco.Banco_SmartClass;
+import engcomp.smartclassufpa.Banco.EstrBanco;
 import engcomp.smartclassufpa.Data.Disciplina;
+import engcomp.smartclassufpa.Data.Horario;
 import engcomp.smartclassufpa.View.Activities.EmentaActivity;
 import android.widget.Toast;
 
@@ -26,24 +28,21 @@ public class BaseActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout; // Variável para armazenar o drawer
     protected MenuItem menuItem;
     public NavigationView navigationView;
+    boolean carregardados = true;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        printConsulta();
-        addDados();
-    }
 
-    private void printConsulta() {
-        Banco_SmartClass banco = new Banco_SmartClass(getApplicationContext());
-        ArrayList<Disciplina> disc = banco.getDisciplinas();
-        for (Disciplina d : disc) {
-            Log.i("Disciplina print", " disciplina: " + d.getCodigo() + " titulo: " + d.getTitulo() +
-                    " professor: " + d.getProfessor() + " semestre: " + d.getsemestre() );
+        if (carregardados) {
+
+            addDados();
+            carregardados = false;
 
         }
     }
+
 
     private void addDados() {
         Log.i("","add dados executado");
@@ -60,10 +59,36 @@ public class BaseActivity extends AppCompatActivity {
         Probabilidade.setSala("Sala 02 Itec");
         banco.adicionar(Probabilidade);
 
-        Disciplina sinaisSistemas = new Disciplina("EC01020","Sinais e Sistemas","ROSANA","2016.4");
+        Disciplina sinaisSistemas = new Disciplina("EC01020","Sinais e Sistemas","ROSANA PAULA DE OLIVEIRA SOARES","2016.4");
         sinaisSistemas.setTurma("02A");
         sinaisSistemas.setSala("Sala 02 Itec");
         banco.adicionar(sinaisSistemas);
+
+        Disciplina RedesII = new Disciplina("EC01021","Redes de computadores II","EDUARDO COELHO CERQUEIRA","2016.4");
+        RedesII.setTurma("02A");
+        RedesII.setSala("Sala 02 Itec");
+        banco.adicionar(RedesII);
+
+        Horario segunda1 = new Horario();
+        segunda1.setDisciplina(Probabilidade);
+        segunda1.setDia_semana(Horario.SEGUNDA);
+        segunda1.setN_horario(Horario.PRIMEIRO_HOR);
+        segunda1.setHorario(Horario.PRIMEIRO_HOR_STR);
+        banco.adicionar(segunda1);
+
+        Horario segunda2 = new Horario();
+        segunda2.setDisciplina(Probabilidade);
+        segunda2.setDia_semana(Horario.SEGUNDA);
+        segunda2.setN_horario(Horario.SEGUNDO_HOR);
+        segunda2.setHorario(Horario.SEGUNDO_HOR_STR);
+        banco.adicionar(segunda2);
+
+        Horario segunda3 = new Horario();
+        segunda3.setDisciplina(Eletronica);
+        segunda3.setDia_semana(Horario.SEGUNDA);
+        segunda3.setN_horario(Horario.TERCEIRO_HOR);
+        segunda3.setHorario(Horario.TERCEIRO_HOR_STR);
+        banco.adicionar(segunda3);
 
 
     }
