@@ -6,10 +6,17 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import engcomp.smartclassufpa.FotosDiasFragmento;
 import engcomp.smartclassufpa.View.Fragments.FotosFragmento;
 import engcomp.smartclassufpa.R;
 
 public class FotosActivity extends BaseActivity {
+
+    public String current;
+    public ArrayList<String> stringArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +65,22 @@ public class FotosActivity extends BaseActivity {
 
 
 
+
+    }
+
+    public void onBackPressed(){
+
+        //super.onBackPressed();
+
+        int count = getFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
+            super.onBackPressed();
+            //additional code
+        } else {
+            getFragmentManager().popBackStack();
+            this.setTitle("Fotos");
+        }
 
     }
 

@@ -20,7 +20,7 @@ public final class EstrututuraBanco {
         public static final String COLUNA_TITULO_NOME = "titulo";
         public static final String COLUNA_TITULO_TIPO = "Char(25)";
 
-        public static final String COLUNA_PROFESSOR_NOME = "PROFESSOR";
+        public static final String COLUNA_PROFESSOR_NOME = "professor";
         public static final String COLUNA_PROFESSOR_TIPO = "Char(50)";
 
         public static final String COLUNA_SALA_NOME = "sala";
@@ -32,7 +32,9 @@ public final class EstrututuraBanco {
         public static final String COLUNA_SEMESTRE_NOME = "semestre";
         public static final String COLUNA_SEMESTRE_TIPO = "Char(6)";
 
+    }
 
+    public static class Horario implements BaseColumns {
 
 
     }

@@ -1,9 +1,12 @@
 package engcomp.smartclassufpa.View.Activities;
 
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.widget.FrameLayout;
 import android.support.v7.widget.RecyclerView;
+import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -16,6 +19,13 @@ public class InicioActivity extends BaseActivity {
     private RecyclerView recyclerview2;
     private InicioRecyclerViewAdapter adapter;
     private ArrayList<Notificacao> aviso;
+
+
+    //VARIAVEIS PRO COISO DE FECHAR
+    private static final int TIME_INTERVAL = 2000; // Tempo entre apertos
+    private long mBackPressed;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +86,29 @@ public class InicioActivity extends BaseActivity {
                 notificacao3.setAssunto("CADÊ O BANCO DE DADOS? ;-;");
                 aviso.add(notificacao3);
         }
+
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout != null)
+        {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+
+            else {
+                if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()){
+                    finish();
+                }
+
+                else {
+                    Toast.makeText(getBaseContext(), "Pressione voltar novamente para sair", Toast.LENGTH_SHORT).show();
+                }
+
+                mBackPressed = System.currentTimeMillis();
+            }
+
+        }
+    }
 }
 
 

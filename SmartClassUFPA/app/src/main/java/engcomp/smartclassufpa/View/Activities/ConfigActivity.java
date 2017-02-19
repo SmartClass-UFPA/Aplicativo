@@ -26,9 +26,7 @@ public class ConfigActivity extends BaseActivity {
         //VOLTAR O APP VOLTE SEMPRE PARA A TELA INICIAL
 
         super.onBackPressed();
-        Intent intent = new Intent(this, InicioActivity.class);
-        startActivity(intent);
-        overridePendingTransition(0, 0);
+
     }
 
 

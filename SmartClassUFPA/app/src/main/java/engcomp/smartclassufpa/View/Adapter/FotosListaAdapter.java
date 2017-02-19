@@ -22,13 +22,11 @@ public class FotosListaAdapter extends BaseAdapter {
 
     private Activity activity;
     private ArrayList<String> arrayList;
-    private String[] dados;
     private static LayoutInflater inflater=null;
 
-    public FotosListaAdapter(Activity activity, ArrayList<String> arrayList, String[] dados) {
+    public FotosListaAdapter(Activity activity, ArrayList<String> arrayList) {
         this.activity = activity;
         this.arrayList = arrayList;
-        this.dados = dados;
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         System.out.println("fez2");
     }

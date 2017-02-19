@@ -1,5 +1,7 @@
 package engcomp.smartclassufpa.View.Activities;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -63,6 +65,16 @@ public class HorariosActivity extends BaseActivity {
 
 
 
+
+    }
+
+
+    public void onBackPressed(){
+
+        // ISSO AQUI É IMPORTANTE PARA QUE QUANDO O USARIO APERTE O BOTAO
+        //VOLTAR O APP VOLTE SEMPRE PARA A TELA INICIAL
+
+        super.onBackPressed();
 
     }
 }

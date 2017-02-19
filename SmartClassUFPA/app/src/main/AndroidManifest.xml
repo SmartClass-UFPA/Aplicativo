@@ -12,6 +12,7 @@
         <activity
             android:name=".View.Activities.InicioActivity"
             android:label="SmartClass UFPA"
+            android:noHistory="true"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,28 +23,34 @@
         <activity
             android:name=".View.Activities.FotosActivity"
             android:label="Fotos"
+            android:noHistory="true"
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".View.Activities.HorariosActivity"
             android:label="Horários"
+            android:noHistory="true"
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".View.Activities.TrabProvActivity"
             android:label="Trabalhos e Provas"
+            android:noHistory="true"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".View.Activities.ConfigActivity"
             android:label="Configurações"
+            android:noHistory="true"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".View.Activities.SobreActivity"
             android:label="Sobre"
+            android:noHistory="true"
             android:theme="@style/AppTheme">
         </activity>
 
         <activity
             android:name=".EmentaActivity"
             android:label="Ementa"
+            android:noHistory="true"
             android:theme="@style/AppTheme">
         </activity>
 

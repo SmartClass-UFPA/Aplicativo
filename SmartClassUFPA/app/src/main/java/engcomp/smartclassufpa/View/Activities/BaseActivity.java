@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import engcomp.smartclassufpa.View.Activities.EmentaActivity;
+import android.widget.Toast;
 import engcomp.smartclassufpa.R;
 
 public class BaseActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class BaseActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout; // Variável para armazenar o drawer
     protected MenuItem menuItem;
     public NavigationView navigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,13 +126,43 @@ public class BaseActivity extends AppCompatActivity {
             }
 
             else {
-                super.onBackPressed();
+
+                Intent intent = new Intent(this, InicioActivity.class);
+                startActivity(intent);
                 overridePendingTransition(0, 0);
+                /**
+                if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()){
+                    super.onBackPressed();
+                   // overridePendingTransition(0, 0);
+                    return;
+                }
+
+                else {
+                 Toast.makeText(getBaseContext(), "Pressione voltar novamente para sair", Toast.LENGTH_SHORT).show();
+                 }
+
+                mBackPressed = System.currentTimeMillis();
+               // super.onBackPressed();
+                //overridePendingTransition(0, 0); **/
+
             }
         }
 
         else {
-            super.onBackPressed();
+
+            Intent intent = new Intent(this, InicioActivity.class);
+            startActivity(intent);
+            overridePendingTransition(0, 0);
+
+            /**if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis())
+            {
+                //super.onBackPressed();
+                //return;
+                finish();
+            }
+            else { Toast.makeText(getBaseContext(), "Pressione voltar novamente para sair", Toast.LENGTH_SHORT).show(); }
+
+            mBackPressed = System.currentTimeMillis(); **/
         }
     }
 
