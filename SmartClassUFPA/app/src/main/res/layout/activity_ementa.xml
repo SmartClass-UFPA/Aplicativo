@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".View.Activities.InicioActivity">
+    tools:context="engcomp.smartclassufpa.View.Activities.InicioActivity"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            >
+        </ListView>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/textoEmenta"
+            android:padding="2sp"/>
 
-    <TextView
-        android:text="EMENTA"
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/layout_direito"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:id="@+id/textView2"
-        android:textSize="24sp" />
-</android.support.design.widget.CoordinatorLayout>
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:layout_weight="4"
+        android:clickable="true"
+        >
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="android.support.v4.app.ListFragment"
+            android:id="@+id/fragmentEmenta"
+            tools:layout="?android:attr/windowActionBarFullscreenDecorLayout" />
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

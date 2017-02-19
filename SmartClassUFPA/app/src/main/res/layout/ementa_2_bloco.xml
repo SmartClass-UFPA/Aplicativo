@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="engcomp.smartclassufpa.InicioActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="1"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMENTAS 2° BLOCO"
+            android:gravity="center"
+            android:padding="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:text="   CalculoII\n   Estrutura de Dados\n   Arquitetura e Organização de computadores\n   Álgebra Linear\n   Variáveis Complexas\n   Projetos de Engenharia II\n   Física II\n
+            "
+            android:layout_gravity="start"
+            />
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disciplina"
+                android:textColor="#000"
+                android:background="@drawable/edit_text_borda2"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda2"
+                android:textColor="#000"
+                android:text="Calculo II"
+                android:gravity="center"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Base:"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="  Calculo I"
+                android:textColor="#000"
+                android:textIsSelectable="true"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ementa"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="@string/ementa_calculoII"
+                android:textColor="#000"
+                android:textIsSelectable="true"
+                android:padding="6sp"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carga horaria  "
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  60 horas"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créditos"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                android:text="  4"
+                />
+
+        </TableRow>
+
+        <!-->                     espaçamento                         <-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"/>
+
+        <!-->                    Estrutura de Dados                       <-->
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disciplina"
+                android:textColor="#000"
+                android:background="@drawable/edit_text_borda2"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda2"
+                android:textColor="#000"
+                android:text="Estrutura de Dados"
+                android:gravity="center"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Base:"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="  Programação"
+                android:textColor="#000"
+                android:textIsSelectable="true"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ementa"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="@string/ementa_estruturaDados"
+                android:textColor="#000"
+                android:textIsSelectable="true"
+                android:padding="6sp"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carga horaria  "
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  90 horas"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créditos"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                android:text="  6"
+                />
+
+        </TableRow>
+
+        <!-->                     espaçamento                         <-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"/>
+
+        <!-->                    Arq. e Organização de computadores    <-->
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Disciplina"
+                android:textColor="#000"
+                android:background="@drawable/edit_text_borda2"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda2"
+                android:textColor="#000"
+                android:text="Arquitetura e Organização de Computadores"
+                android:gravity="center"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Base:"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="  Eletrônica Digital"
+                android:textColor="#000"
+                android:textIsSelectable="true"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ementa"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="@string/ementa_arquiteturaComp"
+                android:textIsSelectable="true"
+                android:padding="6sp"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carga horaria  "
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  60 horas"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créditos"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                android:text="  4"
+                />
+
+        </TableRow>
+
+        <!-->                     espaçamento                         <-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"/>
+
+        <!-->                    Álgebra Linear    <-->
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disciplina"
+                android:textColor="#000"
+                android:background="@drawable/edit_text_borda2"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda2"
+                android:textColor="#000"
+                android:text="Algebra Linear"
+                android:gravity="center"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ementa"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="@string/ementa_algebraLinear"
+                android:textIsSelectable="true"
+                android:padding="6sp"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carga horaria  "
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  30 horas"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créditos"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                android:text="  2"
+                />
+
+        </TableRow>
+
+        <!-->                     espaçamento                         <-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"/>
+
+        <!-->                    Variáveis Complexas                   <-->
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disciplina"
+                android:textColor="#000"
+                android:background="@drawable/edit_text_borda2"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda2"
+                android:textColor="#000"
+                android:text="Variáveis Complexas"
+                android:gravity="center"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ementa"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="@string/ementa_variaveisComplexas"
+                android:textIsSelectable="true"
+                android:padding="6sp"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carga horaria  "
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  30 horas"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créditos"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                android:text="  2"
+                />
+
+        </TableRow>
+
+        <!-->                     espaçamento                         <-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"/>
+
+        <!-->                    Projetos de Engenharia II            <-->
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disciplina"
+                android:textColor="#000"
+                android:background="@drawable/edit_text_borda2"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda2"
+                android:textColor="#000"
+                android:text="Projetos de Engenharia II"
+                android:gravity="center"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ementa"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="@string/ementa_projetosII"
+                android:textIsSelectable="true"
+                android:padding="6sp"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carga horaria  "
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  30 horas"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créditos"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                android:text="  2"
+                />
+
+        </TableRow>
+
+        <!-->                     espaçamento                         <-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"/>
+
+        <!-->                    Física II                            <-->
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disciplina"
+                android:textColor="#000"
+                android:background="@drawable/edit_text_borda2"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda2"
+                android:textColor="#000"
+                android:text="Física II"
+                android:gravity="center"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ementa"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:text="@string/ementa_fisicaII"
+                android:textIsSelectable="true"
+                android:padding="6sp"
+                />
+
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carga horaria  "
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  60 horas"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créditos"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_borda"
+                android:textColor="#000"
+                android:text="  4"
+                />
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <!--fim 1° tabela-->
+
+
+
+    <!--fim da 7° tabela-->
+
+</android.support.design.widget.CoordinatorLayout>

@@ -51,7 +51,8 @@
             android:name=".View.Activities.EmentaActivity"
             android:label="Ementa"
             android:noHistory="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize">
         </activity>
 
 
