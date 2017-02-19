@@ -48,7 +48,7 @@
         </activity>
 
         <activity
-            android:name=".EmentaActivity"
+            android:name=".View.Activities.EmentaActivity"
             android:label="Ementa"
             android:noHistory="true"
             android:theme="@style/AppTheme">
