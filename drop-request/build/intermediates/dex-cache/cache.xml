@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Lidiaxp\.gradle\caches\modules-2\files-2.1\com.dropbox.core\dropbox-core-sdk\2.1.1\786a91e07e28575967a2a1656dd4eaaff10587fb\dropbox-core-sdk-2.1.1.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="786a91e07e28575967a2a1656dd4eaaff10587fb">
+        <dex dex="C:\Users\Lidiaxp\OneDrive\Faculdade\Projetos\apps\SmartClassUfpa\app\build\intermediates\pre-dexed\debug\dropbox-core-sdk-2.1.1-bf985ca60a49ad95835e8065e97e96f62f929cde.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lidiaxp\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.7.4\b8f38a249116b66d804a5ca2b14a3459b7913a94\jackson-core-2.7.4.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="b8f38a249116b66d804a5ca2b14a3459b7913a94">
+        <dex dex="C:\Users\Lidiaxp\OneDrive\Faculdade\Projetos\apps\SmartClassUfpa\app\build\intermediates\pre-dexed\debug\jackson-core-2.7.4-ff948dbad8bd058736df4fb53d5a97a6a17356d9.jar" />
+    </item>
+
+</items>
