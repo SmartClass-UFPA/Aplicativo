@@ -3,6 +3,7 @@ package engcomp.smartclassufpa.View.Activities;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.widget.FrameLayout;
 import android.support.v7.widget.RecyclerView;
 import android.widget.FrameLayout;
@@ -10,6 +11,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import engcomp.smartclassufpa.Banco.BdDisciplina;
+import engcomp.smartclassufpa.Banco.BdStarter;
+import engcomp.smartclassufpa.Data.Disciplina;
 import engcomp.smartclassufpa.View.Adapter.InicioRecyclerViewAdapter;
 import engcomp.smartclassufpa.Data.Notificacao;
 import engcomp.smartclassufpa.R;
@@ -47,6 +51,16 @@ public class InicioActivity extends BaseActivity {
 
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
+
+        BdDisciplina banco = new BdDisciplina(getApplicationContext());
+        Disciplina disciplina = new Disciplina("EC01018","Eletrônica Analógica","Marco josé de souza","2016.4");
+        disciplina.setSala("1");
+        disciplina.setTurma("A");
+        banco.inserir(disciplina);
+
+        Disciplina newDisc = banco.getDisciplina(disciplina.getCodigo());
+        Log.i("banco",newDisc.getCodigo() + " " + newDisc.getTitulo() + " " + newDisc.getProfessor() + " " + newDisc.getsemestre());
+
         recyclerview2 = (RecyclerView) findViewById(R.id.recycler_view2);
         recyclerview2.setLayoutManager(new LinearLayoutManager(this));
         aviso = new ArrayList<>();
