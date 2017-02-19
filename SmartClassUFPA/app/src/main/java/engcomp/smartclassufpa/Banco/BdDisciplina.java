@@ -28,7 +28,7 @@ public class BdDisciplina {
 
     }
 
-    public long inserir (Disciplina disc) {
+    public void inserir (Disciplina disc) {
 
         ContentValues values = new ContentValues();
         values.put(EstrBanco.Disciplina.COLUNA_CODIGO_NOME, "'"+ disc.getCodigo()+"'");
@@ -38,9 +38,7 @@ public class BdDisciplina {
         values.put(EstrBanco.Disciplina.COLUNA_TURMA_NOME,"'"+  disc.getTurma()+"'");
         values.put(EstrBanco.Disciplina.COLUNA_SEMESTRE_NOME,"'"+  disc.getsemestre()+"'");
 
-        Long cod = bd.insert(EstrBanco.Disciplina.NOME_TABELA,null,values);
-
-        return cod;
+        bd.insert(EstrBanco.Disciplina.NOME_TABELA,null,values);
 
     }
 

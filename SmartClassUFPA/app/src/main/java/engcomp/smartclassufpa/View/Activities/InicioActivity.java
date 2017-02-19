@@ -52,14 +52,6 @@ public class InicioActivity extends BaseActivity {
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
 
-        BdDisciplina banco = new BdDisciplina(getApplicationContext());
-        Disciplina disciplina = new Disciplina("EC01018","Eletrônica Analógica","Marco josé de souza","2016.4");
-        disciplina.setSala("1");
-        disciplina.setTurma("A");
-        banco.inserir(disciplina);
-
-        Disciplina newDisc = banco.getDisciplina(disciplina.getCodigo());
-        Log.i("banco",newDisc.getCodigo() + " " + newDisc.getTitulo() + " " + newDisc.getProfessor() + " " + newDisc.getsemestre());
 
         recyclerview2 = (RecyclerView) findViewById(R.id.recycler_view2);
         recyclerview2.setLayoutManager(new LinearLayoutManager(this));
