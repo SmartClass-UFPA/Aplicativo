@@ -1,4 +1,4 @@
-package engcomp.smartclassufpa;
+package engcomp.smartclassufpa.View.Fragments;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -11,10 +11,11 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import engcomp.smartclassufpa.R;
 import engcomp.smartclassufpa.View.Activities.FotosActivity;
 import engcomp.smartclassufpa.View.Adapter.FotosListaAdapter;
 
-public class FotosDiasFragmento extends Fragment {
+public class FotosDiasFragment extends Fragment {
 
 
     Activity mActivity;

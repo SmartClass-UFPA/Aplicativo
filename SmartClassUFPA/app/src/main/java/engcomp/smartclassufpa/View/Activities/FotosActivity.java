@@ -8,9 +8,8 @@ import android.widget.FrameLayout;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import engcomp.smartclassufpa.FotosDiasFragmento;
-import engcomp.smartclassufpa.View.Fragments.FotosFragmento;
+
+import engcomp.smartclassufpa.View.Fragments.FotosFragment;
 import engcomp.smartclassufpa.R;
 
 public class FotosActivity extends BaseActivity {
@@ -59,7 +58,7 @@ public class FotosActivity extends BaseActivity {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        FotosFragmento fragment = new FotosFragmento();
+        FotosFragment fragment = new FotosFragment();
         fragmentTransaction.add(R.id.containerFotos, fragment, "oi");
         fragmentTransaction.commit();
 

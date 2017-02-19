@@ -8,19 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import engcomp.smartclassufpa.FotosDiasFragmento;
 import engcomp.smartclassufpa.R;
 import engcomp.smartclassufpa.View.Adapter.FotosListaAdapter;
 import engcomp.smartclassufpa.View.Activities.FotosActivity;
 
 
-public class FotosFragmento extends Fragment {
+public class FotosFragment extends Fragment {
 
 
     Activity mActivity;
@@ -61,7 +58,7 @@ public class FotosFragmento extends Fragment {
 
                 final FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.addToBackStack(null);
-                ft.replace(R.id.containerFotos, new FotosDiasFragmento());
+                ft.replace(R.id.containerFotos, new FotosDiasFragment());
                 ft.commit();
 
 
