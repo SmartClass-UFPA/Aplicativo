@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import engcomp.smartclassufpa.Data.Disciplina;
+
 /**
  * Created by alberto on 18/02/2017.
  */
@@ -25,9 +27,11 @@ public class BdStarter  extends SQLiteOpenHelper {
     private static final String SQL_APAGAR_DISCIPLINA_TAB =
             "DROP TABLE IF EXISTS " + EstrBanco.Disciplina.NOME_TABELA;
 
+    private Context c;
 
     public BdStarter(Context context) {
         super(context, EstrBanco.NOME_BANCO, null, EstrBanco.VERSAO);
+        c = context;
     }
 
     @Override
@@ -36,7 +40,11 @@ public class BdStarter  extends SQLiteOpenHelper {
         Log.i("Databse", "Criando banco de dados: " + SQL_CRIAR_DISCIPLINA_TAB);
         db.execSQL(SQL_CRIAR_DISCIPLINA_TAB);
 
+
+
     }
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
@@ -45,4 +53,9 @@ public class BdStarter  extends SQLiteOpenHelper {
         onCreate(db);
 
     }
+
+
+
+
+
 }

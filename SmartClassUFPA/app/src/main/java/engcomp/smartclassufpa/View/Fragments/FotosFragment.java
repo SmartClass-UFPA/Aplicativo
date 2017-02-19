@@ -3,6 +3,7 @@ import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import engcomp.smartclassufpa.Banco.Banco_SmartClass;
+import engcomp.smartclassufpa.Data.Disciplina;
 import engcomp.smartclassufpa.R;
 import engcomp.smartclassufpa.View.Adapter.FotosListaAdapter;
 import engcomp.smartclassufpa.View.Activities.FotosActivity;
@@ -20,9 +23,10 @@ import engcomp.smartclassufpa.View.Activities.FotosActivity;
 public class FotosFragment extends Fragment {
 
 
-    Activity mActivity;
-    ArrayList<String> materias;
+    private Activity mActivity;
+    private ArrayList<String> materias;
     public FotosActivity fotosActivity;
+    private String Semestre = "2016.4";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -71,10 +75,19 @@ public class FotosFragment extends Fragment {
 
 
     public ArrayList<String> aList(){
-        String[] array = {"Circuitos Elétricos", "Redes de Computadores II",
-                "Sinais e Sistemas", "Probabilidade e Estatística"};
 
-        ArrayList<String> materias = new ArrayList<>(Arrays.asList(array));
+        //consulta banco
+        Banco_SmartClass banco = new Banco_SmartClass(getActivity().getApplicationContext());
+
+        ArrayList<Disciplina> disciplinas = banco.getDisciplinas(Semestre);
+        materias = new ArrayList<>();
+        Log.i("teste",disciplinas.size()+"");
+        for (Disciplina d : disciplinas) {
+            materias.add(d.getTitulo());
+        }
+
+
+
         return materias;
 
     }

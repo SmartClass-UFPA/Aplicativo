@@ -34,7 +34,7 @@ public final class EstrBanco {
         public static final String COLUNA_CODIGO_TIPO = " Char(7) ";
 
         public static final String COLUNA_TITULO_NOME = "titulo";
-        public static final String COLUNA_TITULO_TIPO = "Char(25) NOT NULL";
+        public static final String COLUNA_TITULO_TIPO = "Char(50) NOT NULL";
 
         public static final String COLUNA_PROFESSOR_NOME = "professor";
         public static final String COLUNA_PROFESSOR_TIPO = "Char(50) NOT NULL";
