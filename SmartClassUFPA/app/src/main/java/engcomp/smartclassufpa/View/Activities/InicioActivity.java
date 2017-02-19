@@ -11,9 +11,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import engcomp.smartclassufpa.Banco.Banco_SmartClass;
 import engcomp.smartclassufpa.Banco.BdDisciplina;
 import engcomp.smartclassufpa.Banco.BdStarter;
 import engcomp.smartclassufpa.Data.Disciplina;
+import engcomp.smartclassufpa.Data.Horario;
 import engcomp.smartclassufpa.View.Adapter.InicioRecyclerViewAdapter;
 import engcomp.smartclassufpa.Data.Notificacao;
 import engcomp.smartclassufpa.R;
@@ -23,6 +25,8 @@ public class InicioActivity extends BaseActivity {
     private RecyclerView recyclerview2;
     private InicioRecyclerViewAdapter adapter;
     private ArrayList<Notificacao> aviso;
+    boolean carregardados = true;
+
 
 
     //VARIAVEIS PRO COISO DE FECHAR
@@ -34,6 +38,8 @@ public class InicioActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         // Define o layout como a do drawer
         setContentView(R.layout.drawer_layout);
@@ -49,6 +55,12 @@ public class InicioActivity extends BaseActivity {
         //Em sua activity, substituir o "activity_inicio" pelo nome do seu layout XML
         getLayoutInflater().inflate(R.layout.activity_inicio, contentFrameLayout);
 
+        if (carregardados) {
+
+            addDados();
+            carregardados = false;
+
+        }
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
 
@@ -92,6 +104,78 @@ public class InicioActivity extends BaseActivity {
                 notificacao3.setAssunto("CADÊ O BANCO DE DADOS? ;-;");
                 aviso.add(notificacao3);
         }
+
+    private void addDados() {
+        Log.i("","add dados executado");
+
+        Banco_SmartClass banco = new Banco_SmartClass(getApplicationContext());
+
+        Disciplina Eletronica = new Disciplina("EC01018","Eletrônica Analogica","MARCO JOSE DE SOUSA","2016.4");
+        Eletronica.setTurma("02A");
+        Eletronica.setSala("Sala 02 Itec");
+        banco.adicionar(Eletronica);
+
+        Disciplina Probabilidade = new Disciplina("EC01019","Probabilidade e estatistica","WALTER JESUS DA COSTA MARTINS FILHO","2016.4");
+        Probabilidade.setTurma("02A");
+        Probabilidade.setSala("Sala 02 Itec");
+        banco.adicionar(Probabilidade);
+
+        Disciplina sinaisSistemas = new Disciplina("EC01020","Sinais e Sistemas","ROSANA PAULA DE OLIVEIRA SOARES","2016.4");
+        sinaisSistemas.setTurma("02A");
+        sinaisSistemas.setSala("Sala 02 Itec");
+        banco.adicionar(sinaisSistemas);
+
+        Disciplina RedesII = new Disciplina("EC01021","Redes de computadores II","EDUARDO COELHO CERQUEIRA","2016.4");
+        RedesII.setTurma("02A");
+        RedesII.setSala("Sala 02 Itec");
+        banco.adicionar(RedesII);
+
+        Horario segunda1 = new Horario();
+        segunda1.setDisciplina(Probabilidade);
+        segunda1.setDia_semana(Horario.SEGUNDA);
+        segunda1.setN_horario(Horario.PRIMEIRO_HOR);
+        segunda1.setHorario(Horario.PRIMEIRO_HOR_STR);
+        banco.adicionar(segunda1);
+
+        Horario segunda2 = new Horario();
+        segunda2.setDisciplina(Probabilidade);
+        segunda2.setDia_semana(Horario.SEGUNDA);
+        segunda2.setN_horario(Horario.SEGUNDO_HOR);
+        segunda2.setHorario(Horario.SEGUNDO_HOR_STR);
+        banco.adicionar(segunda2);
+
+        Horario segunda3 = new Horario();
+        segunda3.setDisciplina(Eletronica);
+        segunda3.setDia_semana(Horario.SEGUNDA);
+        segunda3.setN_horario(Horario.TERCEIRO_HOR);
+        segunda3.setHorario(Horario.TERCEIRO_HOR_STR);
+        banco.adicionar(segunda3);
+
+        Horario segunda4 = new Horario();
+        segunda4.setDisciplina(Eletronica);
+        segunda4.setDia_semana(Horario.SEGUNDA);
+        segunda4.setN_horario(Horario.QUARTO_HOR);
+        segunda4.setHorario(Horario.QUARTO_HOR_STR);
+        banco.adicionar(segunda4);
+
+        Horario segunda5 = new Horario();
+        segunda5.setDisciplina(sinaisSistemas);
+        segunda5.setDia_semana(Horario.SEGUNDA);
+        segunda5.setN_horario(Horario.QUINTO_HOR);
+        segunda5.setHorario(Horario.QUINTO_HOR_STR);
+        banco.adicionar(segunda5);
+
+        Horario segunda6 = new Horario();
+        segunda6.setDisciplina(sinaisSistemas);
+        segunda6.setDia_semana(Horario.SEGUNDA);
+        segunda6.setN_horario(Horario.SEXTO_HOR);
+        segunda6.setHorario(Horario.SEXTO_HOR_STR);
+        banco.adicionar(segunda6);
+
+
+
+
+    }
 
     @Override
     public void onBackPressed() {
