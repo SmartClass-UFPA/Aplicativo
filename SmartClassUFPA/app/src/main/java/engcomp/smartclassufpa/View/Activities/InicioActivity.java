@@ -64,9 +64,7 @@ public class InicioActivity extends BaseActivity {
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
 
-        public void startService(View view) {
-               startService(new Intent(getBaseContext(), ServiceTest.class));
-        }
+        startService(new Intent(getBaseContext(), ServiceTest.class));
 
         recyclerview2 = (RecyclerView) findViewById(R.id.recycler_view2);
         recyclerview2.setLayoutManager(new LinearLayoutManager(this));
