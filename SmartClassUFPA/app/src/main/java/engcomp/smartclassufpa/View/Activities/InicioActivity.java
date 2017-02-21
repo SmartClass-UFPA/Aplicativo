@@ -1,9 +1,11 @@
 package engcomp.smartclassufpa.View.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.support.v7.widget.RecyclerView;
 import android.widget.FrameLayout;
@@ -16,6 +18,7 @@ import engcomp.smartclassufpa.Banco.BdDisciplina;
 import engcomp.smartclassufpa.Banco.BdStarter;
 import engcomp.smartclassufpa.Data.Disciplina;
 import engcomp.smartclassufpa.Data.Horario;
+import engcomp.smartclassufpa.ServiceTest;
 import engcomp.smartclassufpa.View.Adapter.InicioRecyclerViewAdapter;
 import engcomp.smartclassufpa.Data.Notificacao;
 import engcomp.smartclassufpa.R;
@@ -179,11 +182,11 @@ public class InicioActivity extends BaseActivity {
     }
     
     public void professorEmSala(View view){
-        sendPost("/localhost:3000/itec/b2/","1");    
+       // sendPost("/localhost:3000/itec/b2/","1");
         new android.os.Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                     sendPost(("/localhost:3000/itec/b2/","0"); POST de que o professor saiu de sala
+       //              sendPost(("/localhost:3000/itec/b2/","0"); // POST de que o professor saiu de sala
                 }
         }, 600000);
     }

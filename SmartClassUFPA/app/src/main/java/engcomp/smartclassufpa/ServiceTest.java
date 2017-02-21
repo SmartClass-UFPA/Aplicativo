@@ -146,12 +146,12 @@ public class ServiceTest extends Service {
         builder.setContentTitle("SmartClass");
         builder.setContentIntent(p);
         builder.setContentText("Professor está em sala");
-        builder.setSmallIcon(R.drawable.prof);
+        builder.setSmallIcon(R.drawable.edit_text_borda);
 
         android.app.Notification n = builder.build();
         n.vibrate = new long[]{150,1500,100,2000};
         n.flags = android.app.Notification.FLAG_AUTO_CANCEL;
-        nm.notify(R.drawable.prof, n);
+        nm.notify(R.drawable.edit_text_borda, n);
     }
 
     private void getJson(final String url) {
