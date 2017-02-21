@@ -1,3 +1,13 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+    }
+}
+
+
 apply plugin: 'com.android.application'
 
 android {
@@ -5,8 +15,8 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "br.com.lidiaxp.smartclassufpa"
-        minSdkVersion 14
+        applicationId "engcomp.smartclassufpa"
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -24,6 +34,10 @@ android {
         exclude 'META-INF/NOTICE.txt'
     }
 }
+repositories {
+    jcenter()
+}
+
 
 dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
@@ -32,7 +46,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.android.support:recyclerview-v7:25.0.0'
-    compile 'com.android.support:design:22.2.0'
+    compile 'com.android.support:design:25.0.0'
     compile 'com.squareup.okio:okio:1.11.0'
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile files('libs/dropbox-android-sdk-1.6.3.jar')

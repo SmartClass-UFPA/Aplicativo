@@ -1,4 +1,4 @@
-package br.com.lidiaxp.smartclassufpa;
+package engcomp.smartclassufpa;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
