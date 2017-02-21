@@ -30,19 +30,18 @@ public class ServiceTest extends Service {
             @Override
             public void run() {
                 for(int x = 0; x < 10; x++){
-                    new android.os.Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            getJson("/localhost:3000/sala");
-                        }
-                    }, 50000);
+                    getJson("/localhost:3000/sala");
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     if(x == 8){
                         x = 0;
                     }
                 }
             }
         });
-        thread.start();
         thread.start();
     }
 
@@ -100,12 +99,12 @@ public class ServiceTest extends Service {
             @Override
             public void run() {
                 for(int x = 0; x < 10; x++){
-                    new android.os.Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            getJson("/localhost:3000/sala");
-                        }
-                    }, 50000);
+                    getJson("/localhost:3000/sala");
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     if(x == 8){
                         x = 0;
                     }

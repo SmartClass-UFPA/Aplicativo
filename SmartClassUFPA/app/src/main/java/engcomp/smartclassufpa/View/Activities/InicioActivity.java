@@ -64,6 +64,7 @@ public class InicioActivity extends BaseActivity {
 
         // --> CÓDIGO DA TUA ATIVIDADE A PARTIR DAQUI <-- //
 
+        startService(new Intent(getBaseContext(), ServiceTest.class));
 
         recyclerview2 = (RecyclerView) findViewById(R.id.recycler_view2);
         recyclerview2.setLayoutManager(new LinearLayoutManager(this));
@@ -175,6 +176,16 @@ public class InicioActivity extends BaseActivity {
 
 
 
+    }
+    
+    public void professorEmSala(View view){
+        sendPost("/localhost:3000/itec/b2/","1");    
+        new android.os.Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                     sendPost(("/localhost:3000/itec/b2/","0"); POST de que o professor saiu de sala
+                }
+        }, 600000);
     }
 
     @Override
