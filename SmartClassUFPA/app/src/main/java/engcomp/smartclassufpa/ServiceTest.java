@@ -19,6 +19,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import engcomp.smartclassufpa.View.Activities.BaseActivity;
+
 public class ServiceTest extends Service {
     int mStartMode;
     IBinder mBinder;
@@ -137,7 +139,7 @@ public class ServiceTest extends Service {
 
     public void vibrar(Context context){
         NotificationManager nm = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
-        PendingIntent p = PendingIntent.getActivity(context, 0, new Intent(context, Main.class) ,0);
+        PendingIntent p = PendingIntent.getActivity(context, 0, new Intent(context, BaseActivity.class) ,0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         builder.setTicker("");
