@@ -21,12 +21,11 @@ public class BdDisciplina {
     /**
      * classe de atualização e acesso a disciplinas no banco de dados
      */
-    private BdStarter banco;
-    private SQLiteDatabase bd;
+     SQLiteDatabase bd;
 
-    public BdDisciplina (Context c) {
-        banco = new BdStarter(c);
-        bd = banco.getWritableDatabase();
+    public BdDisciplina ( SQLiteDatabase bd) {
+
+        this.bd = bd;
 
     }
 

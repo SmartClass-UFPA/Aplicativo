@@ -38,7 +38,6 @@ public class ServiceTest extends Service {
             }
         });
         thread.start();
-        thread.start();
     }
 
     @Override
