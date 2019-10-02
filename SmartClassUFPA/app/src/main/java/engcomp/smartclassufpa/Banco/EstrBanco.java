@@ -55,6 +55,23 @@ public final class EstrBanco {
     }
 
     public static class Horario implements BaseColumns {
+        public static final String NOME_TABELA = "horario";
+
+        public static final String COLUNA_N_HORARIO_NOME = "n_horario";
+        public static final String COLUNA_N_HORARIO_TIPO = "int NOT NULL";
+
+        public static final String COLUNA_COD_DISCIPLINA_NOME = "cod_disciplina";
+        public static final String COLUNA_COD_DISCIPLINA_TIPO = "Char(7) NOT NULL";
+
+        public static final String COLUNA_HORARIO_NOME = "horario";
+        public static final String COLUNA_HORARIO_TIPO = "Char(25) NOT NULL";
+
+        public static final String COLUNA_DIA_SEMANA_NOME = "dia_semana";
+        public static final String COLUNA_DIA_SEMANA_TIPO = "int NOT NULL";
+
+        public static final String[] COLUNAS = {Horario.COLUNA_N_HORARIO_NOME,
+                Horario.COLUNA_COD_DISCIPLINA_NOME, Horario.COLUNA_HORARIO_NOME, Horario.COLUNA_DIA_SEMANA_NOME};
+
 
 
     }

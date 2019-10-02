@@ -12,7 +12,8 @@
         android:background="#808080"
         android:dividerHeight="3dp"
         android:divider="@color/background_externo"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:elevation="3dp">
     </ListView>
 
 </FrameLayout>
