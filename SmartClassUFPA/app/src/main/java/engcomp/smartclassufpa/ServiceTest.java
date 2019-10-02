@@ -1,4 +1,4 @@
-package engcomp.smartclassufpa;
+package br.com.lidiaxp.smartclassufpa;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -12,14 +12,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-import engcomp.smartclassufpa.View.Activities.BaseActivity;
 
 public class ServiceTest extends Service {
     int mStartMode;
@@ -32,12 +25,12 @@ public class ServiceTest extends Service {
             @Override
             public void run() {
                 for(int x = 0; x < 10; x++){
-                    getJson("/localhost:3000/sala");
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    new android.os.Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            getJson("/localhost/botaoprofessor");
+                        }
+                    }, 50000);
                     if(x == 8){
                         x = 0;
                     }
@@ -47,66 +40,18 @@ public class ServiceTest extends Service {
         thread.start();
     }
 
-    /*
-    *sendPost("/localhost:3000/itec/b2/","1");    POST do professor em sala
-    * new android.os.Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            sendPost(("/localhost:3000/itec/b2/","0"); POST de que o professor saiu de sala
-                        }
-                    }, 600000);
-    *
-    */
-
-    private void sendPost(String site, String value) throws Exception {
-
-        String url = site;
-        URL obj = new URL(url);
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-        //add reuqest header
-        con.setRequestMethod("POST");
-
-        String urlParameters = value;
-
-        // Send post request
-        con.setDoOutput(true);
-        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-        wr.writeBytes(urlParameters);
-        wr.flush();
-        wr.close();
-
-        int responseCode = con.getResponseCode();
-        System.out.println("\nSending 'POST' request to URL : " + url);
-        System.out.println("Post parameters : " + urlParameters);
-        System.out.println("Response Code : " + responseCode);
-
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(con.getInputStream()));
-        String inputLine;
-        StringBuffer response = new StringBuffer();
-
-        while ((inputLine = in.readLine()) != null) {
-            response.append(inputLine);
-        }
-        in.close();
-
-        //print result
-        System.out.println(response.toString());
-    }
-
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 for(int x = 0; x < 10; x++){
-                    getJson("/localhost:3000/sala");
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    new android.os.Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            getJson("/localhost/botaoprofessor");
+                        }
+                    }, 50000);
                     if(x == 8){
                         x = 0;
                     }
@@ -139,19 +84,19 @@ public class ServiceTest extends Service {
 
     public void vibrar(Context context){
         NotificationManager nm = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
-        PendingIntent p = PendingIntent.getActivity(context, 0, new Intent(context, BaseActivity.class) ,0);
+        PendingIntent p = PendingIntent.getActivity(context, 0, new Intent(context, Main.class) ,0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         builder.setTicker("");
         builder.setContentTitle("SmartClass");
         builder.setContentIntent(p);
         builder.setContentText("Professor está em sala");
-        builder.setSmallIcon(R.drawable.edit_text_borda);
+        builder.setSmallIcon(R.drawable.prof);
 
         android.app.Notification n = builder.build();
         n.vibrate = new long[]{150,1500,100,2000};
         n.flags = android.app.Notification.FLAG_AUTO_CANCEL;
-        nm.notify(R.drawable.edit_text_borda, n);
+        nm.notify(R.drawable.prof, n);
     }
 
     private void getJson(final String url) {
@@ -174,9 +119,9 @@ public class ServiceTest extends Service {
                 } else {
                     try {
                         String body = response.body().string();
-                        String teacher = localizando(body.toString(), "prof_em_sala");
+                        //String teacher = localizando(body.toString(), "professor");
 
-                        if(teacher.equals("1")){
+                        if(/*teacher*/body.equals("True")){
                             vibrar(getBaseContext());
                         }
                     } catch (IOException e) {
