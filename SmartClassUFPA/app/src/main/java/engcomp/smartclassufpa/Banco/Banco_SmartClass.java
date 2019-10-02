@@ -1,10 +1,12 @@
 package engcomp.smartclassufpa.Banco;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
 import engcomp.smartclassufpa.Data.Disciplina;
+import engcomp.smartclassufpa.Data.Horario;
 
 /**
  * Created by alberto on 18/02/2017.
@@ -12,13 +14,20 @@ import engcomp.smartclassufpa.Data.Disciplina;
 
 public class Banco_SmartClass {
 
-    BdDisciplina bancoDisciplina;
+    private final BdStarter banco;
+    private final SQLiteDatabase bd;
+    private BdDisciplina bancoDisciplina;
+    private BdHorario bancoHorario;
 
 
 
     public Banco_SmartClass (Context  c) {
 
-        bancoDisciplina = new BdDisciplina(c);
+        banco = new BdStarter(c);
+        bd = banco.getWritableDatabase();
+
+        bancoDisciplina = new BdDisciplina(bd);
+        bancoHorario = new BdHorario(bd);
 
     }
 
@@ -33,9 +42,19 @@ public class Banco_SmartClass {
         bancoDisciplina.salvar(d);
     }
 
-    public ArrayList getDisciplinas() {
+    public void adicionar(Horario h)  {
+        bancoHorario.salvar(h,bancoDisciplina);
+    }
+
+    public ArrayList<Disciplina> getDisciplinas() {
         return bancoDisciplina.getDisciplinas();
 
+    }
+
+
+    public ArrayList<Horario> getHorariosDoDia(int dia) {
+
+        return bancoHorario.getHorario(EstrBanco.Horario.COLUNA_DIA_SEMANA_NOME,dia,bancoDisciplina);
     }
 
 

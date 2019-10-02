@@ -27,6 +27,18 @@ public class BdStarter  extends SQLiteOpenHelper {
     private static final String SQL_APAGAR_DISCIPLINA_TAB =
             "DROP TABLE IF EXISTS " + EstrBanco.Disciplina.NOME_TABELA;
 
+    private static final String SQL_CRIAR_HORARIOS_TAB =
+            "CREATE TABLE " + EstrBanco.Horario.NOME_TABELA + " ("
+           + EstrBanco.Horario.COLUNA_N_HORARIO_NOME
+                    + SPACE + EstrBanco.Horario.COLUNA_N_HORARIO_TIPO + SEP + EstrBanco.Horario.COLUNA_COD_DISCIPLINA_NOME + SPACE
+            + EstrBanco.Horario.COLUNA_COD_DISCIPLINA_TIPO + SEP + EstrBanco.Horario.COLUNA_HORARIO_NOME + SPACE + EstrBanco.Horario.COLUNA_HORARIO_TIPO
+            + SEP + EstrBanco.Horario.COLUNA_DIA_SEMANA_NOME + SPACE + EstrBanco.Horario.COLUNA_DIA_SEMANA_TIPO  + SEP + " PRIMARY KEY ("+
+                    EstrBanco.Horario.COLUNA_N_HORARIO_NOME + SEP + EstrBanco.Horario.COLUNA_DIA_SEMANA_NOME + ")"+ " )";
+    private static final String SQL_APAGAR_HORARIOS_TAB =
+            "DROP TABLE IF EXISTS " + EstrBanco.Horario.NOME_TABELA;
+
+
+
     private Context c;
 
     public BdStarter(Context context) {
@@ -40,6 +52,9 @@ public class BdStarter  extends SQLiteOpenHelper {
         Log.i("Databse", "Criando banco de dados: " + SQL_CRIAR_DISCIPLINA_TAB);
         db.execSQL(SQL_CRIAR_DISCIPLINA_TAB);
 
+        Log.i("Databse", "Criando banco de dados: " + SQL_CRIAR_HORARIOS_TAB);
+        db.execSQL(SQL_CRIAR_HORARIOS_TAB);
+
 
 
     }
@@ -50,6 +65,7 @@ public class BdStarter  extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
 
         db.execSQL(SQL_APAGAR_DISCIPLINA_TAB);
+        db.execSQL(SQL_APAGAR_HORARIOS_TAB);
         onCreate(db);
 
     }

@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Activities.BaseActivity" />
+
         <activity
             android:name=".View.Activities.InicioActivity"
             android:label="SmartClass UFPA"
@@ -16,10 +16,10 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".View.Activities.BaseActivity" />
         <activity
             android:name=".View.Activities.FotosActivity"
             android:label="Fotos"
@@ -44,16 +44,16 @@
             android:name=".View.Activities.SobreActivity"
             android:label="Sobre"
             android:noHistory="true"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"/>
+
 
         <activity
             android:name=".View.Activities.EmentaActivity"
             android:label="Ementa"
             android:noHistory="true"
             android:theme="@style/AppTheme"
-            android:configChanges="orientation|screenSize">
-        </activity>
+            android:configChanges="orientation|screenSize"/>
+
 
 
     </application>

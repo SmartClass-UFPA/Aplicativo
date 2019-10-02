@@ -34,7 +34,7 @@ public class SegundaFragment extends Fragment {
         adapter = new ListViewHorarioAdapter(getActivity().getApplicationContext());
         listViewSegunda.setAdapter(adapter);
 
-        bdHorarios = new BdHorarios();
+        bdHorarios = new BdHorarios(getActivity().getApplicationContext());
         adapter.addHorarios(bdHorarios.getHorarioSegunda());
 
 

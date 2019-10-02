@@ -13,7 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import engcomp.smartclassufpa.Banco.Banco_SmartClass;
+import engcomp.smartclassufpa.Banco.EstrBanco;
 import engcomp.smartclassufpa.Data.Disciplina;
+import engcomp.smartclassufpa.Data.Horario;
 import engcomp.smartclassufpa.View.Activities.EmentaActivity;
 import android.widget.Toast;
 
@@ -31,42 +33,12 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        printConsulta();
-        addDados();
-    }
-
-    private void printConsulta() {
-        Banco_SmartClass banco = new Banco_SmartClass(getApplicationContext());
-        ArrayList<Disciplina> disc = banco.getDisciplinas();
-        for (Disciplina d : disc) {
-            Log.i("Disciplina print", " disciplina: " + d.getCodigo() + " titulo: " + d.getTitulo() +
-                    " professor: " + d.getProfessor() + " semestre: " + d.getsemestre() );
-
-        }
-    }
-
-    private void addDados() {
-        Log.i("","add dados executado");
-
-        Banco_SmartClass banco = new Banco_SmartClass(getApplicationContext());
-
-        Disciplina Eletronica = new Disciplina("EC01018","Eletrônica Analogica","MARCO JOSE DE SOUSA","2016.4");
-        Eletronica.setTurma("02A");
-        Eletronica.setSala("Sala 02 Itec");
-        banco.adicionar(Eletronica);
-
-        Disciplina Probabilidade = new Disciplina("EC01019","Probabilidade e estatistica","WALTER JESUS DA COSTA MARTINS FILHO","2016.4");
-        Probabilidade.setTurma("02A");
-        Probabilidade.setSala("Sala 02 Itec");
-        banco.adicionar(Probabilidade);
-
-        Disciplina sinaisSistemas = new Disciplina("EC01020","Sinais e Sistemas","ROSANA","2016.4");
-        sinaisSistemas.setTurma("02A");
-        sinaisSistemas.setSala("Sala 02 Itec");
-        banco.adicionar(sinaisSistemas);
 
 
     }
+
+
+
 
     /**
      * @Override protected void onCreate(Bundle savedInstanceState) {

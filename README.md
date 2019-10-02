@@ -1,4 +1,4 @@
-# Aplicativo
+# Aplicativo Smart Class
 
 "Activity Incial - Organiza as informações principais resumidas em uma tela inicial
 

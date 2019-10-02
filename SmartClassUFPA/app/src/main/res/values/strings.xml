@@ -17,43 +17,73 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_semana_aulas">SemanaAulas</string>
-    <string name="textoEmenta">textoEmenta</string>
-    <string name="ementa_calculoI">ementa calculo 1</string>
-    <string name="ementa_fisicaI">ementa fisica 1</string>
-    <string name="ementa_eletroDigital">ementa eletronica digital</string>
-    <string name="ementa_programação">ementa programação</string>
-    <string name="ementa_projetosI">ementa projetos 1</string>
-    <string name="ementa_calculoII">ementa calculo 2</string>
-    <string name="ementa_estruturaDados">ementa estrutura de dados</string>
-    <string name="ementa_arquiteturaComp">ementa arquitetura comp</string>
-    <string name="ementa_algebraLinear">ementa algebra lienar</string>
-    <string name="ementa_variaveisComplexas">ementa variáveis complexas</string>
-    <string name="ementa_projetosII">ementa projetos de engenharia 2</string>
-    <string name="ementa_fisicaII">ementa fisica 2</string>
-    <string name="ementa_CalculoIII">ementa calculo 3</string>
-    <string name="ementa_circuitosEletricos">ementa circuitos eletricos</string>
-    <string name="ementa_redesI">ementa redes</string>
-    <string name="ementa_sistemasOper">ementa sistemas operacionais</string>
-    <string name="ementa_eletroAnal">ementa eletronica analogica</string>
-    <string name="ementa_probabilidade">ementa probabilidade</string>
-    <string name="ementa_sinaisESist">ementa sinais e sistemas</string>
-    <string name="ementa_redesII">ementa redes II</string>
-    <string name="ementa_microProcessadores">ementa microprocessadores</string>
-    <string name="ementa_projetosIII">ementa processos 3</string>
-    <string name="ementa_processosEst">Ementa processos estocasticos</string>
-    <string name="ementa_PDS">ementa pds</string>
-    <string name="ementa_engSoftware">ementa engenharia de software</string>
-    <string name="ementa_teoriaComp">ementa teoria da computação</string>
-    <string name="ementa_hardwareInter">Ementa hardwareInter</string>
-    <string name="ementa_bancoDados">ementa banco de dados</string>
-    <string name="ementa_automaçãoInd">ementa automação industrial</string>
-    <string name="ementa_eletromag">emeta eletromag</string>
-    <string name="ementa_empNegocios">ementa</string>
-    <string name="ementa_metodologia">ementa</string>
-    <string name="ementa_comunicaçãoDigital">ementa</string>
-    <string name="ementa_inteligenciaComp">ementa</string>
-    <string name="ementa_compGrafica">ementa</string>
-    <string name="ementa_teoriaCompII">ementa</string>
-    <string name="ementa_métodosNum">ementa</string>
+    
+    <string name="textoEmenta">Aqui voce encontrará a ementa de cada matéria separadas por blocos.
+        A ementa é o regimento de todos os assuntos que devem ser abordados em cada disciplina.</string>
+    <!--emetas por materia-->
+    <string name="ementa_calculoI"> Conjuntos numéricos. Funções e geometria analítica no R2. Limites.Cálculo diferencial: estudo e variações de funções. Cálculo integral</string>
+    <string name="ementa_fisicaI">Dinâmica, Ondas e Termodinâmica. 1. Vetores; 2. Movimento em uma, duas e três dimensões; 3. Força e Movimento I (Leis de Newton); 4. Força e Movimento II (Atrito); 5. Energia Cinética e Trabalho; 6. Energia Potencial e Conservação da Energia; 7. Momento Linear; 8. Oscilações; 9. Ondas I (Ondas Mecânicas e Interferência); 10. Ondas II (Som); 11. Temperatura, Calor e Primeira Lei da Termodinâmica; 12. Entropia e Segunda Lei da Termodinâmica. 13. Noções de Medidas e Erros Experimentais.</string>
+    <string name="ementa_eletroDigital">Portas lógicas básicas. Minimização de circuitos lógicos. Análise e projeto de circuitos lógicos combinacionais. Lógica Proposicional e de Predicados. Linguagem Proposicional e de Primeira Ordem. Sistemas Dedutivos. Tabelas Verdade e Estruturas de Primeira Ordem. Blocos básicos de construção de circuitos digitais: somadores, comparadores, multiplexadores. Circuitos sequenciais: contadores, registradores de deslocamento. Projetos auxiliados por computador: introdução às ferramentas CAD para hardware digital.</string>
+    <string name="ementa_programação">Introdução a algoritmos e pseudo-códigos. Introdução à programação imperativa: variáveis, constantes e expressões. Controle de fluxo de execução e repetição. Estruturas triviais de dados: vetores, matrizes e registros. Noções de funções e procedimentos. Comandos de atribuição e declaração de constantes, variáveis e tipos de dados. Expressões. Ponteiros. Instruções condicionais de controle de fluxo. Bibliotecas definidas pelo usuário. Entrada e saída. Alocação dinâmica de memória. Noções de estruturas compostas de dados. Algoritmos para pesquisa e ordenação; algoritmos de busca; algoritmos geométricos; algoritmos recursivos; algoritmos não-determinísticos.</string>
+    <string name="ementa_projetosI">Disciplina prática de ementa variável envolvendo abordagens de conceitos relacionados com conteúdo programático do período letivo e a integração plena na vida do Curso, da UFPA e do cotidiano. A disciplina se voltará para o trabalho em grupo com componentes de socialização e de aprendizagem, trabalhados a partir do desenvolvimento de projetos na área de engenharia da computação.</string>
+    <string name="ementa_calculoII">Geometria analítica no R3. Funções de mais de uma variável real. Derivadas parciais e aplicações. Expansão em séries (exemplo: Taylor). Integrais múltiplas. Aplicações das integrais múltiplas.</string>
+    <string name="ementa_estruturaDados">Estudo de estruturas de dados concomitante com o aprendizado de uma linguagem de programação orientada a objeto. Conceitos de classe, objeto, herança, polimorfismo, tratamento de exceção, interface. Estruturas de dados clássicas. Listas, filas e pilhas com suas formas de implementação. Árvores e grafos. Desenvolvimento de um projeto.</string>
+    <string name="ementa_arquiteturaComp">Histórico e Conceitos Básicos. O Sistema de Computação. Barramentos. Memória Interna e Externa. Entrada e Saída. Suporte ao Sistema Operacional. A Unidade Central de Processamento. Unidade Lógica e Aritmética. Conjunto de Instruções. Endereçamento. Registradores, pipelines, caches. CISC e RISC. Paralelismo de Instruções. Unidade de Controle. Arquiteturas Paralelas.</string>
+    <string name="ementa_algebraLinear">Vetores, Operações com Vetores; Sistemas de Equações Lineares; Regra de Cramer; Matrizes; Transformações Lineares; Autovalores e Autovetores; Espaços Vetoriais. Aplicações de Álgebra Linear.</string>
+    <string name="ementa_variaveisComplexas">Números Complexos. Funções de uma Variável Complexa. Séries de Potência. Resíduos e Pólos. Fasores.</string>
+    <string name="ementa_projetosII">Disciplina prática de ementa variável envolvendo abordagens de conceitos relacionados com conteúdo programático do período letivo e a integração plena na vida do Curso, da UFPA e do cotidiano. A disciplina se voltará para o trabalho em grupo com componentes de socialização e de aprendizagem, trabalhados a partir do desenvolvimento de projetos na área de engenharia da computação.</string>
+    <string name="ementa_fisicaII">Eletromagnetismo e Óptica. 1. Cargas Elétricas; 2. Campos Elétricos; 3. Lei de Gauss; 4. Potencial Elétrico; 5. Capacitância e Dielétricos; 6. Corrente e Resistência; 7. Circuitos; 8. Campos Magnéticos; 9. Campos Magnéticos Produzidos por Correntes; 10. Indução e Indutância, 11. Oscilações Eletromagnéticas e Corrente Alternada; 12. Equações de Maxwell. 13. Ondas Eletromagnéticas; 14. Imagens; 15. Interferência e Difração. 16. Noções de óptica.</string>
+    <string name="ementa_CalculoIII">Equações Diferenciais Ordinárias; Transformadas de Laplace, Sistemas de Equações Diferenciais Ordinárias Lineares; Elementos de Séries de Fourier; Integral de Fourier; Transformada de Fourier; Polinômios de Legendre e Funções de Bessel; Equações Diferenciais Lineares e Derivadas Parciais - problemas de contorno.</string>
+    <string name="ementa_circuitosEletricos">Elementos de circuitos. Leis básicas de circuitos. Circuitos simples. Circuitos de primeira ordem. Circuitos de Segunda ordem. Análise em regime permanente senoidal. Circuitos resonantes. Circuitos magneticamente acoplados..</string>
+    <string name="ementa_redesI">Introdução a Redes de Computadores e à Internet. Arquitetura em Camadas. Camada Física. Cabeamento metálico e óptico. Camada de enlace de dados. A subcamada de controle de acesso ao meio. Equipamentos de Interconexão de redes. Redes Locais sem Fio. Redes de Alta velocidade. Projeto e especificação de Infra-estrutura de Redes.</string>
+    <string name="ementa_sistemasOper">Introdução: definições, histórico e classificação. Gerência de processos/processador: definições e conceitos fundamentais, concorrência, sincronização e comunicação entre processos, algoritmos de escalonamento de processos, monoprocessamento e multiprocessamento. Gerência de memória: definições e conceitos fundamentais, swapping, memória virtual e paginação e segmentação de memória. Sistemas de arquivo: Definições e conceitos fundamentais, diretórios, Segurança e mecanismos de proteção. Gerência de entrada e saída: entrada e saída por hardware e software, discos, terminais, relógios e vídeo. Alocação de recursos e “deadlocks”. Estudo de casos.</string>
+    <string name="ementa_eletroAnal">Amplificadores operacionais: comportamento ideal e configurações básicas. Diodos: funcionamento, modelagem, tipos e aplicações. Transistor de Junção Bipolar: funcionamento, modelagem, polarização, análise de pequenos sinais e aplicações. Transistores de Efeito de Campo (MOSFET e JFET): funcionamento, modelagem, polarização, análise de pequenos sinais e aplicações. Multivibradores e Osciladores.</string>
+    <string name="ementa_probabilidade">Introdução à probabilidade. Análise Combinatória. Variáveis aleatórias unidimensionais. Funções de uma variável aleatória e valores esperados. Esperança Matemática. Distribuições conjuntas de probabilidade. Variáveis aleatórias de duas ou mais dimensões (vetores aleatórios). Importantes distribuições discretas e contínuas. A distribuição normal. Introdução à estatística e descrição de dados. Amostras aleatórias e distribuições de amostras. Estimação de parâmetros. Testes de hipóteses. Projeto e análise de experimentos estatísticos. Regressão linear simples e correlação. Regressão múltipla.</string>
+    <string name="ementa_sinaisESist">Análise no domínio do tempo de sinais contínuos. Analise de sistemas em tempo continuo usando a transformada de Laplace. Analise de sinais no tempo continuo: a serie de Fourier. Analise de sinais no tempo continuo: a transformada de Fourier. Analise no espaço de estados.</string>
+    <string name="ementa_redesII">Arquitetura TCP/IP. Camada de Aplicação, Camada de transporte. Desenvolvimento de aplicações de redes usando sockets. Camada de rede e roteamento. Aplicações multimídia em rede. Simulação de protocolos e Redes de Computadores.</string>
+    <string name="ementa_microProcessadores">Arquitetura de microprocessadores. Memórias e Dispositivos de Entrada e Saída. Ciclo de instrução. Execução de Instruções. Capacidade de Interrupção e Técnicas de Entrada e Saída. Conjunto de instruções. Decodificação de Endereços de Memória e Entrada e Saída. Sistemas de Barramentos. Microprocessadores atuais. Ferramentas de desenvolvimento de Software Básico. Microcontroladores atuais. Exemplos de circuitos controlados por microprocessador e microcontrolador</string>
+    <string name="ementa_projetosIII">Disciplina prática de ementa variável envolvendo abordagens de conceitos relacionados com conteúdo programático do período letivo e a integração plena na vida do Curso, da UFPA e do cotidiano. A disciplina se voltará para o trabalho em grupo com componentes de socialização e de aprendizagem, trabalhados a partir do desenvolvimento de projetos na área de engenharia da computação.</string>
+    <string name="ementa_processosEst">Conceitos gerais e definições. Processo de Poisson. Processos de Markov. Teoria de filas, Processos Gaussianos. Sistemas com entradas aleatórias, espectro de potencia, identificação de sistemas; Estimação espectral.</string>
+    <string name="ementa_PDS">Sinais e sistemas discretos no tempo. Transformada de Fourier para sinais discretos no tempo. Transformada Z. Amostragem de sinais contínuos. Analise no domínio transformado de sistemas lineares, invariantes e discretos no tempo. Estruturas para sistemas discretos no tempo. Técnicas de projeto de filtros discretos (digitais). Transformada discreta de Fourier e aplicações.</string>
+    <string name="ementa_engSoftware">Fundamentos de Engenharia de Software. Processos de desenvolvimento de software. Engenharia de Requisitos. Engenharia de Software Orientada a Objetos. Documentação de software. Verificação e Validação de software. Manutenção de Software. Gerenciamento de Configuração de Software.</string>
+    <string name="ementa_teoriaComp">Autômatos e Linguagens Formais. Linguagens regulares. Linguagens livres de contexto. Modelos computacionais universais. Computabilidade.</string>
+    <string name="ementa_hardwareInter">Desenvolvida em torno de projetos baseados em microcontrolador, PLD / FPGA, microprocessador e/ou microcomputador. Alguns dos temas abordados nos projetos são: dimensionamento dos circuitos de interface entre a porta analógica e a digital de um circuito híbrido, tratamento dos sinais oriundos de sensores/transdutores e a avaliação da parcela de programação (software) adequada em um sistema de controle.</string>
+    <string name="ementa_bancoDados">Sistema de Gerência de BD: funcionalidades, módulos principais, categorias de usuários, dicionário de dados; Modelo relacional: conceitos, restrições de integridade, álgebra relacional, cálculo relacional. Modelagem de dados: etapas do projeto de um BD relacional, modelo Entidade-Relacionamento (ER), mapeamento ER-relacional; Normalização: objetivo, dependências funcionais, formas normais; Linguagens SQL: DDL, DML, implementação restrições de integridade, visões, autorização de acesso; Prática em algum SGBD livre.</string>
+    <string name="ementa_automaçãoInd">Noções de controle; Sensores e atuadores industrias; Comandos baseados em lógica de contatos; Introdução aos controladores lógico programáveis (CLPs); Análise e projeto baseado em lógica estruturada e diagrama de estados; Redes de Petri; Redes de comunicação de dados em sistemas de automação industrial; Sistemas supervisórios e interfaces homem-máquina (IHM) em sistemas.</string>
+    <string name="ementa_eletromag">Parte 1: Álgebra vetorial; Sistemas e transformação de coordenadas; Cálculo vetorial.
+Parte 2: Eletrostática; Campos eletrostáticos; Campos elétricos em meio material; Problemas de valor de fronteira em eletrostática
+Parte 3 - Magnetostática; Campos magnetostáticos; Forças, matérias e dispositivos magnéticos e; Equações de Maxwell</string>
+    <string name="ementa_empNegocios">Visão histórica das teorias administrativas. Processos básicos da administração empresarial. Planejamento, organização, direção e controle. Gerenciamento das pessoas. A administração Informatizada. Gestão de Projetos: Inicio de Projeto. Definição das metas de um projeto. Definição das atividades de um projeto. Planejamento e aquisição de recursos. Avaliação dos Riscos. Desenvolvimento de um projeto. Planos de Negócios e Legislação Básica</string>
+    <string name="ementa_metodologia">Natureza do Conhecimento. Função da Metodologia Científica. Fundamentos da Ciência e do Trabalho Científico. Método Científico. Transmissão do Conhecimento. Definição de Tema de Pesquisa e Plano de Trabalho. Técnicas de Escrita de Relatórios e Monografia. Levantamento Bibliográfico e Documentação. Regras e Prática de Bibliografia. Análise e Interpretação de Textos Científicos. Busca Sistemática por Informações.</string>
+    <string name="ementa_comunicaçãoDigital">Sinais e espectros. Representação da informação e modulação em banda base. Demodulação e detecção em banda base. Filtro Casado. Interferência intersimbólica. Equalização. Modulação, demodulação e detecção em banda passante. Envoltória complexa. Probabilidade de erro. Análise do sistema de comunicação.</string>
+    <string name="ementa_inteligenciaComp">Da inteligência artificial à inteligência computacional. Inteligência computacional simbólica. Inteligência computacional conexionista. Inteligência computacional evolucionária. Inteligência computacional híbrida. Lógica Fuzzy. Redes neurais artificiais. Modelo do Neurônio, Topologias de redes neurais artificiais. Representação do conhecimento. Principais paradigmas de redes neurais artificiais. Sistemas Fuzzy: conjuntos nebulosos. Conjunto de regras Fuzzy. Mecanismos de raciocínio. Algoritmos genéticos. Programação evolutiva. Estratégias evolutivas. Aplicações da inteligência computacional.</string>
+    <string name="ementa_compGrafica">Visão geral sobre computação gráfica. Conceitos sobre imagem digital.
+Desenhando objetos 2D. Introdução às principais técnicas para a síntese
+de imagens por computador, a partir de modelos geométricos
+tridimensionais. Coordenadas homogêneas no plano e no espaço.
+Objetos 3D, transformações geométricas, de perspectiva e modelo de
+câmara. Algoritmos geométricos para visibilidade. Algoritmos pontuais
+para visibilidade. Modelos de iluminação, cor e textura. Cálculo de
+sombras projetadas. Técnicas para modelagem de sólidos, curvas e
+superfícies. Eliminação de linhas e superficies escondidas. Percepção
+visual humana, Amostragem, realce, filtragem, restauração de imagens,
+Segmentação de imagens, Compressão e comunicação de imagens,
+Noções de visão computacional e reconhecimento de padrões).</string>
+    <string name="ementa_teoriaCompII">Teoria dos grafos: caminhos; coloração; grafos infinitos; conectividade;
+grafos orientados e não-orientados. Teoria da Complexidade: Medidas
+de Complexidade. Notação “Big O”, Complexidade do algoritmo no pior
+caso; Complexidade do algoritmo no caso médio; Complexidade mínima
+do problema. Análise de Algoritmos Iterativos e Recursivos. Classes P,
+NP, NP-Completa e NP-Difícil. Teoria da intratabilidade.</string>
+    <string name="ementa_métodosNum">Computação Simbólica. Matemática Intervalar. Cálculo Numérico.
+Sistemas de Equações Lineares. Equações Polinomiais e
+Transcendentes. Métodos de Interpolação Numérica. Diferenciação e
+Integração Numérica. Programação Matemática: Programação Linear,
+Formulação, Solução Gráfica e o Método Simplex. O Dual do Problema
+de Programação Linear. Teoremas de Dualidade. Programação
+Dinâmica. Programação Inteira. Programação não Linear: Métodos de
+Otimização sem Restrição. Minimização com Restrições Lineares.
+Função Penalidade. Otimização.</string>
+    <!--até que enfim-->
 
 </resources>
